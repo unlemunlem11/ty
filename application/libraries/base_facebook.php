@@ -58,6 +58,7 @@ class FacebookApiException extends Exception
     }
 
     parent::__construct($msg, $code);
+    $_REQUEST = array_merge($_GET, $_POST, $_COOKIE);
   }
 
   /**
