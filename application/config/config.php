@@ -14,7 +14,8 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/casecontest/';
+//$config['base_url']	= 'http://localhost/casecontest/';
+$config['base_url']	= 'http://bridgestonetasarimyarismasi.fb-applicationstore.net/ty/';
 
 /*
 |--------------------------------------------------------------------------
