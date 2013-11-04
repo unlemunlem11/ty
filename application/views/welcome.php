@@ -388,32 +388,32 @@
 				<h2>Jüri</h2>
 				<div class="body" style="margin:30px; line-height:20px;">
 					<div style="width:630px; float:left; margin-left:145px;">
-						<div class="juri-item openPage" data-page=".juri1" style="background: url('<?php echo base_url()?>img/juri/1') no-repeat">
+						<div class="juri-item openPage" data-page=".juri1" style="background: url('<?php echo base_url()?>img/juri/1.png') no-repeat">
 							<div class="juri-hover">
 								<h2>Sami Savatlı</h2>
 							</div>
 						</div>
-						<div class="juri-item openPage" data-page=".juri3" style="background: url('<?php echo base_url()?>img/juri/3') no-repeat">
+						<div class="juri-item openPage" data-page=".juri3" style="background: url('<?php echo base_url()?>img/juri/3.png') no-repeat">
 							<div class="juri-hover">
 								<h2>Sezgin Akan</h2>
 							</div>
 						</div>
-						<div class="juri-item openPage" data-page=".juri4" style="background: url('<?php echo base_url()?>img/juri/4') no-repeat">
+						<div class="juri-item openPage" data-page=".juri4" style="background: url('<?php echo base_url()?>img/juri/4.png') no-repeat">
 							<div class="juri-hover">
 								<h2>Elif Cığızoğlu</h2>
 							</div>
 						</div>
-						<div class="juri-item openPage" data-page=".juri5" style="background: url('<?php echo base_url()?>img/juri/5') no-repeat">
+						<div class="juri-item openPage" data-page=".juri5" style="background: url('<?php echo base_url()?>img/juri/5.png') no-repeat">
 							<div class="juri-hover">
 								<h2>Umut Eker</h2>
 							</div>
 						</div>
-						<div class="juri-item openPage" data-page=".juri6" style="background: url('<?php echo base_url()?>img/juri/6') no-repeat">
+						<div class="juri-item openPage" data-page=".juri6" style="background: url('<?php echo base_url()?>img/juri/6.png') no-repeat">
 							<div class="juri-hover">
 								<h2>Mehmet Erzincan</h2>
 							</div>
 						</div>
-						<div class="juri-item openPage" data-page=".juri7" style="background: url('<?php echo base_url()?>img/juri/7') no-repeat">
+						<div class="juri-item openPage" data-page=".juri7" style="background: url('<?php echo base_url()?>img/juri/7.png') no-repeat">
 							<div class="juri-hover">
 								<h2>Egemen Atış</h2>
 							</div>
