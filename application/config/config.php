@@ -15,7 +15,7 @@
 |
 */
 //$config['base_url']	= 'http://localhost/casecontest/';
-$config['base_url']	= 'http://bridgestonetasarimyarismasi.fb-applicationstore.net/ty/';
+$config['base_url']	= 'https://bridgestonetasarimyarismasi.fb-applicationstore.net/ty/';
 
 /*
 |--------------------------------------------------------------------------
