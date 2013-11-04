@@ -186,7 +186,7 @@
 			                $('[name=last_name]').val(uinfo.last_name);
 			                $("[name=email]").val(uinfo.email);
 
-			                $.post("<?php echo base_url(); ?>welcome/user/", {
+			                $.post("<?php echo base_url(); ?>index.php/welcome/user/", {
 			                	userdata : userdata
 			                });
 						 });
