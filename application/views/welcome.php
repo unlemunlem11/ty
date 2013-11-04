@@ -172,7 +172,7 @@
 			$(".contentHolder").perfectScrollbar();
 
 			$(".openPage").click(function(){
-				p = $(this).data("page");
+				var p = $(this).data("page");
 				if(p == ".kayit"){
 					
 					FB.login(function(response) {
@@ -186,7 +186,7 @@
 			                $('[name=last_name]').val(uinfo.last_name);
 			                $("[name=email]").val(uinfo.email);
 
-			                $.post("<?php base_url(); ?>welcome/user/", {
+			                $.post("<?php echo base_url(); ?>welcome/user/", {
 			                	userdata : userdata
 			                });
 						 });
