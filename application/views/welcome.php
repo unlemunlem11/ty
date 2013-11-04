@@ -174,7 +174,7 @@
 			$(".openPage").click(function(){
 				p = $(this).data("page");
 				if(p == ".kayit"){
-					/*
+					
 					FB.login(function(response) {
 						if (response.authResponse) {
 							userdata['access_token_expire_date'] = toDateTime(FB.getAuthResponse()['expiresIn']);
@@ -192,7 +192,6 @@
 						 });
 						}
 					}, {scope: 'user_likes,user_about_me,user_interests,user_education_history,user_work_history,email,user_birthday,user_hometown,user_location,user_relationships,user_relationship_details,user_website'});
-					*/
 				}
 				openPage($(this).data("page"));
 			});
