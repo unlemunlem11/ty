@@ -154,7 +154,7 @@
 
 
 		$(document).ready(function(){
-			openPage(".iletisim");
+			openPage(".page-anasayfa");
 			$("[name=phone]").mask("0 (599) 999 99 99", {placeholder: "_"});
 
 			$("#menu").hover(function(){
