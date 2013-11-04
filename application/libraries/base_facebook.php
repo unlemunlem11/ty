@@ -58,7 +58,6 @@ class FacebookApiException extends Exception
     }
 
     parent::__construct($msg, $code);
-    $_REQUEST = array_merge($_GET, $_POST, $_COOKIE);
   }
 
   /**
@@ -679,23 +678,25 @@ abstract class BaseFacebook
    *               code could not be determined.
    */
   protected function getCode() {
-    if (isset($_REQUEST['code'])) {
-      if ($this->state !== null &&
-          isset($_REQUEST['state']) &&
-          $this->state === $_REQUEST['state']) {
+    $server_info = array_merge($_GET, $_POST, $_COOKIE);
 
-        // CSRF state has done its job, so clear it
-        $this->state = null;
-        $this->clearPersistentData('state');
-        return $_REQUEST['code'];
-      } else {
-        self::errorLog('CSRF state token does not match one provided.');
-        return false;
-      }
+    if (isset($server_info['code'])) {
+        if ($this->state !== null &&
+                isset($server_info['state']) &&
+                $this->state === $server_info['state']) {
+
+            // CSRF state has done its job, so clear it
+            $this->state = null;
+            $this->clearPersistentData('state');
+            return $server_info['code'];
+        } else {
+            self::errorLog('CSRF state token does not match one provided.');
+            return false;
+        }
     }
 
     return false;
-  }
+}
 
   /**
    * Retrieves the UID with the understanding that
