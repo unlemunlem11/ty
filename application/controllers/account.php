@@ -1,4 +1,4 @@
-<?
+<?php
 class Account extends CI_Controller{
 
 	function __construct(){
