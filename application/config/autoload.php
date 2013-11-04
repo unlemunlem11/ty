@@ -64,7 +64,7 @@ $autoload['libraries'] = array("database", "facebook", "session");
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', "access", "define", "question");
+$autoload['helper'] = array('url', "access");
 
 
 /*
