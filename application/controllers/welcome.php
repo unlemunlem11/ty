@@ -14,6 +14,7 @@ class Welcome extends CI_Controller {
 
 	public function user(){
 		$user = $this->facebook->getUser();
+		print_r($user);
 		if ($user) {
             try {
                 $userdata['me'] = $this->facebook
