@@ -1,5 +1,5 @@
 <?php include("head.php");?>
-	<title></title>
+	<title><?php echo $this->agent->platform()?></title>
 	<script type="text/javascript">
 
 		window.fbAsyncInit = function() {
