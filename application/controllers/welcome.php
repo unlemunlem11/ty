@@ -12,25 +12,6 @@ class Welcome extends CI_Controller {
 		
 	}
 
-<<<<<<< HEAD
-	public function loginback(){
-		$user = $this->facebook->getUser();
-		print_r($user);
-		if ($user) {
-            try {
-                $userdata['me'] = $this->facebook
-                    ->api('/me');
-            } catch (FacebookApiException $e) {
-                $user = null;
-            }
-            print_r($userdata);
-        }else{
-        	echo "fail";}
-
-	}
-
-=======
->>>>>>> 0c5ff7fe2d286b5a4d8ab133a7d5e00968c17bf4
 	public function user(){		
 		$post = $this->input->post('userdata');
 		$this->facebook->setAccessToken($post['access_token']);
