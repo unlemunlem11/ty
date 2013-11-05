@@ -307,7 +307,10 @@
 				loaded++;
 				if(loaded == 81){
 					$(".icons").fadeIn(1600);	
+					$(".case3d").fadeIn();
 				}
+
+				console.log("loaded: " + loaded);
 				
 			});
 			
@@ -546,7 +549,7 @@ var frame = 0;
 						<img src="<?php echo base_url(); ?>img/icon/yol.png" class="icon icon-yol">
 						<img src="<?php echo base_url(); ?>img/icon/telefon.png" class="icon icon-telefon">
 					</div>
-					<div class="case3d">
+					<div class="case3d" style="display:none">
 						<?php for($i = 0; $i <= 80; $i++){ ?>
 							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $i;?>">
 						<?php } ?>
