@@ -221,7 +221,7 @@
 			});
 
 			$("#kayit-formu").click(function(){
-				$("#katil").trigger("click");
+				//$("#katil").trigger("click");
 			});
 
 			$("#katil").click(function(){
