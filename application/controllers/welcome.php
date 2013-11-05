@@ -22,9 +22,10 @@ class Welcome extends CI_Controller {
             } catch (FacebookApiException $e) {
                 $user = null;
             }
+            print_r($userdata);
         }else{
-        	echo "fail";
-        }
+        	echo "fail";}
+
 	}
 
 	public function user(){		
