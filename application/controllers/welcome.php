@@ -40,7 +40,7 @@ class Welcome extends CI_Controller {
 			  'scope' => 'user_likes,user_about_me,user_interests,user_education_history,user_work_history,email,user_birthday,user_hometown,user_location,user_relationships,user_relationship_details,user_website',
 			  'redirect_uri' => 'https://bridgestonetasarimyarismasi.fb-applicationstore.net/ty/welcome/loginback/'
 			);
-        	header("location: " . $this->facebook->getLoginUrl($param));
+        	header("location: " . $this->facebook->getLoginUrl($params));
         }
         $post = $this->input->post('userdata');
 		
