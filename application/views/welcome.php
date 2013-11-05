@@ -259,15 +259,7 @@
 			$("#form-gonder").click(function(){
 				var hata = false;
 				$(".iletisim input, .iletisim textarea").each(function(ind, elem){
-					if($(elem).val() < $(elem).data("minlength")){
-						$(elem).tipTip({
-							activation : "focus",
-							keepAlive: true,
-							defaultPosition: "top"
-						}).focus().parents(".input").addClass("input-alert");
-						hata = true;
-						return false;
-					}else if($(elem).attr("name") == "email" && $(elem).val().search("@") == "-1"){
+					if($(elem).val() < $(elem).data("minlength") || ($(elem).attr("name") == "email" && $(elem).val().search("@") == "-1")){
 						$(elem).tipTip({
 							activation : "focus",
 							keepAlive: true,
@@ -276,7 +268,8 @@
 						hata = true;
 						return false;
 					}else{
-						$(elem).removeClass("input-alert");
+						$("div[id^=tiptip_]").remove();
+						$(elem).parents(".input").removeClass("input-alert");
 					}
 				});
 
