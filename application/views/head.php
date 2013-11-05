@@ -47,11 +47,18 @@
 			
 		});
 	</script>
+
 	<style type="text/css">
 		<?php if($this->agent->platform() != "Mac OS X"){?>
 			.page h2, .page .body p, .btn-lg, .textarea textarea, .input input::-moz-placeholder, .input input::-webkit-input-placeholder, .input input, #tiptip_holder, .juri-detay .body h2 span, .juri-detay .title {
 				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 				font-weight: 100 !important;
 			}
+
+			.page h2 {
+				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+				font-weight: 100 !important;
+			}
 		<?php } ?>
 	</style>
+
