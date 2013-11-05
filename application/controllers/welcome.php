@@ -52,14 +52,13 @@ class Welcome extends CI_Controller {
 	}
 
 	function upload(){
-		sleep(3);
 		//$targetFolder = '/casecontest/uploads'; // Relative to the root
 		$targetFolder = '/ty/uploads'; // Relative to the root
 
 		if (!empty($_FILES)) {
 			$tempFile = $_FILES['file']['tmp_name'];
 			$targetPath = $_SERVER['DOCUMENT_ROOT'] . $targetFolder;
-			$filename = $_FILES['file']['name'] . rand(1,9999999999);
+			$filename = rand(1,9999999999) . $_FILES['file']['name'];
 			$targetFile = rtrim($targetPath,'/') . '/' . $filename;
 			//$targetFile = rtrim($targetPath,'/') . '/' . $this->input->post('model') . "-" . $this->input->post('onarka') . "-" . $this->input->post('renk') . ".jpg";
 			
@@ -74,6 +73,7 @@ class Welcome extends CI_Controller {
 				$this->User->facebook_id = $this->session->userdata("fid");
 				$this->File->user_id = $this->User->get_id();
 				$this->File->name = $filename;
+				log_message("error", "facebook_id: " . $this->User->facebook_id);
 				$this->File->create();
 				echo 1;
 			} else {
