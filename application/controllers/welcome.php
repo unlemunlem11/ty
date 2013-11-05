@@ -54,7 +54,7 @@ class Welcome extends CI_Controller {
 	function upload(){
 		//$targetFolder = '/casecontest/uploads'; // Relative to the root
 		$targetFolder = '/ty/uploads'; // Relative to the root
-
+		log_message("error", "lets start ");
 		if (!empty($_FILES)) {
 			$tempFile = $_FILES['file']['tmp_name'];
 			$targetPath = $_SERVER['DOCUMENT_ROOT'] . $targetFolder;
@@ -65,9 +65,11 @@ class Welcome extends CI_Controller {
 			// Validate the file type
 			$fileTypes = array('jpg','jpeg', 'png', 'pdf', 'ai', 'psd', 'tif'); // File extensions
 			$fileParts = pathinfo($_FILES['file']['name']);
-			
+			log_message("error", "if -> ");
 			if (in_array($fileParts['extension'],$fileTypes)) {
+				log_message("error", "if true");
 				move_uploaded_file($tempFile,$targetFile);
+				log_message("error", "file moved");
 				$this->load->model('User');
 				$this->load->model('File');
 				$this->User->facebook_id = $this->session->userdata("fid");
@@ -75,8 +77,10 @@ class Welcome extends CI_Controller {
 				$this->File->name = $filename;
 				log_message("error", "facebook_id: " . $this->User->facebook_id);
 				$this->File->create();
+				log_message("error", "created");
 				echo 1;
 			} else {
+				log_message("error", "if false");
 				echo 0;
 			}
 		}
