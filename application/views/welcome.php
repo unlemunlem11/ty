@@ -263,6 +263,43 @@
 				}
 			});
 
+
+			$("#form-gonder").click(function(){
+				var hata = false;
+				$(".iletisim input, .iletisim textarea").each(function(ind, elem){
+					if($(elem).val() < $(elem).data("minlength")){
+						$(elem).tipTip({
+							activation : "focus",
+							keepAlive: true,
+							defaultPosition: "top"
+						}).focus().parents(".input").addClass("input-alert");
+						hata = true;
+						return false;
+					}else if($(elem).attr("name") == "email" && $(elem).val().search("@") == "-1"){
+						$(elem).tipTip({
+							activation : "focus",
+							keepAlive: true,
+							defaultPosition: "top"
+						}).focus().parents(".input").addClass("input-alert");
+						hata = true;
+						return false;
+					}else{
+						$(elem).removeClass("input-alert");
+					}
+				});
+
+				if(hata == true){
+					return false;
+				}else{
+					var data = $("#iletisim-formu").serializeObject();
+					$.post("<?php echo base_url(); ?>welcome/contact/", data, function(d){
+						$("#iletisim-formu-wrapper").fadeOut(function(){
+							$("#contact-success").fadeIn();
+						});
+					});	
+				}
+			});
+
 			$("#tasariminput").change(function(){
 				$("#tasarimfilename").val($(".hiddeninput").val());
 			});
@@ -603,7 +640,7 @@
 			<div class="page pop iletisim casebg">
 				<h2>İletişim</h2>
 				<div class="body" style="width:520px; margin:30px;">
-					<div style="float:left; margin-left:30px;">
+					<div id="iletisim-formu-wrapper" style="float:left; margin-left:30px;">
 						<form id="iletisim-formu">
 							<div class="input">
 								<input type="text" name="first_name" placeholder="Ad" title="İsminizi giriniz!" data-minlength="3">
@@ -615,10 +652,14 @@
 								<input type="text" name="email" placeholder="E-posta" title="Geçerli bir e-posta adresi yazınız!" data-minlength="4">
 							</div>
 							<div class="input textarea">
-								<textarea title="Üniversitenizi yazınız!" data-minlength="3" placeholder="Yorum"></textarea>
+								<textarea name="message" title="Mesajınızı yazmalısınız" data-minlength="5" placeholder="Yorum"></textarea>
 							</div>
 						</form>
 						<span class="btn-lg" id="form-gonder" style="margin-left:100px;margin-top:40px;">+ Gönder</span>
+					</div>
+					<div id="contact-success" style="display:none; text-align:center;margin-top:200px;">
+						<p style="font-weight:bold; font-size:19px;">İletişim formunuz ulaştı.</p><br>
+						<p style="font-size:18px;font-weight:bold;"><br>Teşekkür ederiz.</p>
 					</div>
 				</div>
 			</div>

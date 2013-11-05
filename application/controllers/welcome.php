@@ -99,4 +99,17 @@ class Welcome extends CI_Controller {
 		$this->User->facebook_id = $this->session->userdata("fid");
 		echo $this->User->update($update);
 	}
+
+	function contact(){
+		$post = $this->input->post(null,true);
+		$this->load->model('Contact');
+		$this->load->model('User');
+		$this->User->facebook_id = $this->session->userdata("fid");
+		$this->Contact->user_id = $this->User->get_id();
+		$this->Contact->first_name = $post['first_name'];
+		$this->Contact->last_name = $post['last_name'];
+		$this->Contact->email = $post['email'];
+		$this->Contact->message = $post['message'];
+		echo $this->Contact->create();
+	}
 }

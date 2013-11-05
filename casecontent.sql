@@ -11,11 +11,27 @@
  Target Server Version : 50528
  File Encoding         : utf-8
 
- Date: 11/05/2013 15:12:43 PM
+ Date: 11/05/2013 16:00:04 PM
 */
 
 SET NAMES utf8;
 SET FOREIGN_KEY_CHECKS = 0;
+
+-- ----------------------------
+--  Table structure for `Contact`
+-- ----------------------------
+DROP TABLE IF EXISTS `Contact`;
+CREATE TABLE `Contact` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) DEFAULT NULL,
+  `first_name` varchar(255) DEFAULT NULL,
+  `last_name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `message` text,
+  `ip_address` varchar(255) DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `File`
@@ -25,7 +41,7 @@ CREATE TABLE `File` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL,
   `created_at` datetime DEFAULT NULL,
-  `ip_addres` varchar(255) DEFAULT NULL,
+  `ip_address` varchar(255) DEFAULT NULL,
   `name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -48,6 +64,7 @@ CREATE TABLE `User` (
   `facebook_data` text,
   `form` int(11) DEFAULT NULL,
   `university` varchar(255) DEFAULT NULL,
+  `access_token_expire_date` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
