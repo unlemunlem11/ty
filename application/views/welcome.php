@@ -259,11 +259,12 @@
 			$("#form-gonder").click(function(){
 				var hata = false;
 				$(".iletisim input, .iletisim textarea").each(function(ind, elem){
-					if($(elem).data("alertclass") != ""){
-						var alert_class = $(elem).data("alertclass");
+					if($(elem).is("textarea") != ""){
+						var alert_class = "textarea-alert";
 					}else{
 						var alert_class = "input-alert";
 					}
+					console.log("alertclass: " + alert_class);
 					if($(elem).val() < $(elem).data("minlength") || ($(elem).attr("name") == "email" && $(elem).val().search("@") == "-1")){
 						$(elem).tipTip({
 							activation : "focus",
