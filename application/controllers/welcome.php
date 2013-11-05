@@ -12,7 +12,7 @@ class Welcome extends CI_Controller {
 		
 	}
 
-	public function user(){
+	public function loginback(){
 		$user = $this->facebook->getUser();
 		print_r($user);
 		if ($user) {
@@ -22,6 +22,26 @@ class Welcome extends CI_Controller {
             } catch (FacebookApiException $e) {
                 $user = null;
             }
+        }else{
+        	echo "fail";
+        }
+	}
+
+	public function user(){		
+		$user = $this->facebook->getUser();
+		if ($user) {
+            try {
+                $userdata['me'] = $this->facebook
+                    ->api('/me');
+            } catch (FacebookApiException $e) {
+                $user = null;
+            }
+        }else{
+        	$params = array(
+			  'scope' => 'user_likes,user_about_me,user_interests,user_education_history,user_work_history,email,user_birthday,user_hometown,user_location,user_relationships,user_relationship_details,user_website',
+			  'redirect_uri' => 'https://bridgestonetasarimyarismasi.fb-applicationstore.net/ty/welcome/loginback/'
+			);
+        	header("location: " . $this->facebook->getLoginUrl($param));
         }
         $post = $this->input->post('userdata');
 		
