@@ -22,6 +22,9 @@
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.mask.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/perfect-scrollbar.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.transit.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>js/imagesloaded.js"></script>
+	
 	
 
 	

@@ -398,7 +398,21 @@
 .contentHolder { position:relative; margin:0px auto; padding:0px; width: 440px; height: 400px; overflow: hidden; }
 .contentHolder .scrollcontent { height: 900px; }
 
-.case3d img {display:none; height:528px;}
+.case3d {margin-top:64px;}
+.case3d img {display:none; height:515px; width:309px;z-index:99; position: relative}
+
+.icon {position:absolute;z-index:2;}
+.icon-araba {left:96px;top:-30px;}
+.icon-yol {left:318px; top:350px;}
+.icon-telefon {left: 392px; top:118px;}
+.icon-like {left: 5px; top:400px;}
+.icon-tabela {left:-5px; top:329px;}
+.icon-park {left: -50px; top:240px;}
+.icon-trafik {left:-24px; top:150px;}
+.icon-gunes {left:0px; top:57px;}
+.icon-araba {left:120px;top:33px;}
+.icon-pusula {left: 278px;top: 48px;}
+
 
 
 

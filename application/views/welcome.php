@@ -303,7 +303,16 @@
 			});
 
 			$(".case3d img:first-child").fadeIn();
+			$(".case3d img").load(function(){
+				loaded++;
+				if(loaded == 81){
+					$(".icons").fadeIn(1600);	
+				}
+				
+			});
+			
 
+			
 			setInterval(function(){
 				nextFrame(frame);
 				if(frame == 80){
@@ -312,8 +321,194 @@
 					frame++;
 				}
 			}, 50);
+			
+
+			setTimeout(function(){
+				animatePusula();
+				setInterval(function(){
+					animatePusula();
+				}, 4050);
+			}, 400);
+			
+			setTimeout(function(){
+				animateTelefon();
+				setInterval(function(){
+					animateTelefon();
+				}, 4050);
+			}, 2000);
+
+
+			setTimeout(function(){
+				animateYol();
+				setInterval(function(){
+					animateYol();
+				}, 4050);
+			}, 200);
+
+			setTimeout(function(){
+				animateLike();
+				setInterval(function(){
+					animateLike();
+				}, 4050);
+			}, 1100);
+
+			setTimeout(function(){
+				animatePark();
+				setInterval(function(){
+					animatePark();
+				}, 4050);
+			}, 500);
+
+			setTimeout(function(){
+				animateTrafik();
+				setInterval(function(){
+					animateTrafik();
+				}, 4050);
+			}, 1900);
+
+			setTimeout(function(){
+				animateGunes();
+				setInterval(function(){
+					animateGunes();
+				}, 4050);
+			}, 420);
+
+			setTimeout(function(){
+				animateAraba();
+				setInterval(function(){
+					animateAraba();
+				}, 4050);
+			}, 120);
+
+			setTimeout(function(){
+				animateTabela();
+				setInterval(function(){
+					animateTabela();
+				}, 4050);
+			}, 80);
+
+			
 
 		});
+
+var loaded = 0;
+
+function animateTelefon(){
+	
+		$(".icon-telefon").css("z-index", "98");
+		setTimeout(function(){
+			$(".icon-telefon").css("z-index", "100");
+		}, 2000);
+	
+	$(".icon-telefon").
+		transition({ x: '-=340px', y: '-=30px', scale: 0.8, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=200px', y: '-=30px', scale: 1 , perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '+=340px', y: '+=30px', scale: 1.2, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=200px', y: '+=30px', scale: 1 , perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animatePusula(){
+
+		$(".icon-pusula").css("z-index", "98");
+		setTimeout(function(){
+			$(".icon-pusula").css("z-index", "100");
+		}, 2000);
+	
+	$(".icon-pusula").
+		transition({ x: '-=240px', y: '+=30px', scale: 0.8, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', y: '+=20px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '+=240px', y: '-=30px', scale: 1.3, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', y: '-=20px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animateYol(){
+
+		$(".icon-yol").css("z-index", "98");
+		setTimeout(function(){
+			$(".icon-yol").css("z-index", "100");
+		}, 2000);
+	
+	$(".icon-yol").
+		transition({ x: '-=340px', y: '-=30px',  scale: 0.8, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px',y: '-=20px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '+=340px', y: '+=30px', scale: 1.2, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', y: '+=30px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animateLike(){
+
+		$(".icon-like").css("z-index", "100");
+		setTimeout(function(){
+			$(".icon-like").css("z-index", "98");
+		}, 2000);
+	
+	$(".icon-like").		
+		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animateTabela(){
+
+	$(".icon-tabela").css("z-index", "100");
+		setTimeout(function(){
+			$(".icon-tabela").css("z-index", "98");
+		}, 2000);
+	
+	$(".icon-tabela").
+		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animatePark(){
+
+		$(".icon-park").css("z-index", "100");
+		setTimeout(function(){
+			$(".icon-park").css("z-index", "98");
+		}, 2000);
+	
+	$(".icon-park").
+		transition({ x: '+=340px',y: '+=40px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', y: '+=30px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '-=100px',y: '-=40px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=340px', y: '-=30px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animateTrafik(){
+
+		$(".icon-trafik").css("z-index", "100");
+		setTimeout(function(){
+			$(".icon-trafik").css("z-index", "98");
+		}, 2000);
+	
+	$(".icon-trafik").
+		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animateGunes(){
+
+		
+		$(".icon-gunes").css("z-index", "100");
+		setTimeout(function(){
+			$(".icon-gunes").css("z-index", "98");	
+		}, 2000);
+	
+	$(".icon-gunes").
+		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+}
+
+function animateAraba(){
+	$(".icon-araba").transition({
+		  perspective : '+=100px',
+		  rotateY: '+=180deg'
+		}, 2000, 'linear').transition({
+		  perspective : '+=100px',
+		  rotateY: '-=180deg'
+		}, 2050, 'linear');
+	/*
+		$(".icon-araba").css("z-index", "98");
+		setTimeout(function(){
+			$(".icon-araba").css("z-index", "100");
+		}, 2000);
+	
+	$(".icon-araba").
+		transition({ x: '-=240px', perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
+		transition({ x: '+=240px', perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)');
+	*/
+}
 
 function nextFrame(frame_id){
     $(".caseframe" + frame_id).hide();
@@ -340,6 +535,17 @@ var frame = 0;
 					<div class="openPage hemenbasvur" data-page=".basvuru"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px">
+					<div class="icons" style="position:absolute; display:none;">
+						<img src="<?php echo base_url(); ?>img/icon/araba.png" class="icon icon-araba">
+						<img src="<?php echo base_url(); ?>img/icon/gunes.png" class="icon icon-gunes">
+						<img src="<?php echo base_url(); ?>img/icon/like.png" class="icon icon-like">
+						<img src="<?php echo base_url(); ?>img/icon/park.png" class="icon icon-park">
+						<img src="<?php echo base_url(); ?>img/icon/pusula.png" class="icon icon-pusula">
+						<img src="<?php echo base_url(); ?>img/icon/tabela.png" class="icon icon-tabela">
+						<img src="<?php echo base_url(); ?>img/icon/trafik.png" class="icon icon-trafik">
+						<img src="<?php echo base_url(); ?>img/icon/yol.png" class="icon icon-yol">
+						<img src="<?php echo base_url(); ?>img/icon/telefon.png" class="icon icon-telefon">
+					</div>
 					<div class="case3d">
 						<?php for($i = 0; $i <= 80; $i++){ ?>
 							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $i;?>">
