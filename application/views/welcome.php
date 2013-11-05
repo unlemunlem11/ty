@@ -312,7 +312,7 @@
 
 				}
 
-				console.log("loaded: " + loaded);
+				$(".yukleme_yuzde").text((81 / 100) * loaded);
 				
 			});
 			
@@ -541,6 +541,7 @@ var frame = 0;
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px">
 					<div style="width:100%;float:left;" class="case3dloading"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;width:40px;"></div>
+					<div style="width:100%;float:left;" class="case3dloading">Yükleniyor (<span class="yukleme_yuzde"></span>)</div>
 					<div class="icons" style="position:absolute; display:none;">
 						<img src="<?php echo base_url(); ?>img/icon/araba.png" class="icon icon-araba">
 						<img src="<?php echo base_url(); ?>img/icon/gunes.png" class="icon icon-gunes">
