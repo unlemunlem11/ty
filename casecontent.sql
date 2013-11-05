@@ -11,7 +11,7 @@
  Target Server Version : 50528
  File Encoding         : utf-8
 
- Date: 11/05/2013 15:05:34 PM
+ Date: 11/05/2013 15:12:43 PM
 */
 
 SET NAMES utf8;
@@ -47,6 +47,7 @@ CREATE TABLE `User` (
   `facebook_id` bigint(11) DEFAULT NULL,
   `facebook_data` text,
   `form` int(11) DEFAULT NULL,
+  `university` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
