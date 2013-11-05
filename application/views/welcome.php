@@ -48,6 +48,7 @@
 		            }
 		 
 		 			if(content == 1){
+		 				openPage(".yukle");
 		 				$("#upload-content").fadeOut(function(){
 		 					$("#upload-success").fadeIn();
 		 				});
