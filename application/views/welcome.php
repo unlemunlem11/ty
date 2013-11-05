@@ -265,7 +265,6 @@
 					}else{
 						var alert_class = "input-alert";
 					}
-					console.log("alertclass: " + alert_class);
 					if($(elem).val() < $(elem).data("minlength") || ($(elem).attr("name") == "email" && $(elem).val().search("@") == "-1")){
 						$(elem).tipTip({
 							activation : "focus",
@@ -308,7 +307,9 @@
 				if(loaded == 81){
 					$(".icons").fadeIn(1600);	
 					$(".case3d").fadeIn();
-					$(".case3dloading").fadeOut();
+					$(".sol").fadeIn();
+					$(".case3dloading").hide();
+
 				}
 
 				console.log("loaded: " + loaded);
@@ -535,7 +536,7 @@ var frame = 0;
 		<?php include("header.php");?>
 		<div class="wrapper">
 			<div class="page page-anasayfa">
-				<div class="sol">
+				<div class="sol" style="display:none">
 					<div class="openPage hemenbasvur" data-page=".basvuru"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px">
