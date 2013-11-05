@@ -398,6 +398,7 @@
 .contentHolder { position:relative; margin:0px auto; padding:0px; width: 440px; height: 400px; overflow: hidden; }
 .contentHolder .scrollcontent { height: 900px; }
 
+.case3d img {display:none; height:528px;}
 
 
 

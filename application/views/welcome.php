@@ -302,7 +302,29 @@
 				}
 			});
 
+			$(".case3d img:first-child").fadeIn();
+
+			setInterval(function(){
+				nextFrame(frame);
+				if(frame == 80){
+					frame = 0;
+				}else{
+					frame++;
+				}
+			}, 50);
+
 		});
+
+function nextFrame(frame_id){
+    $(".caseframe" + frame_id).hide();
+	if(frame_id == 80){
+		var next_frame = 0;
+	}else{
+		var next_frame = frame_id + 1;
+	}
+    $(".caseframe" + next_frame).show();
+}
+var frame = 0;
 	</script>
 
 
@@ -316,6 +338,13 @@
 			<div class="page page-anasayfa">
 				<div class="sol">
 					<div class="openPage hemenbasvur" data-page=".basvuru"></div>
+				</div>
+				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px">
+					<div class="case3d">
+						<?php for($i = 0; $i <= 80; $i++){ ?>
+							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $i;?>">
+						<?php } ?>
+					</div>
 				</div>
 			</div>
 
