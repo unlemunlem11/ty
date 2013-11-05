@@ -254,6 +254,10 @@
 	height: 95px; 
 }
 
+.textarea-alert {
+	background: url("../img/textarea-alert.png") !important;
+}
+
 .textarea textarea {
 	width: 400px;
 	margin-left: 10px;

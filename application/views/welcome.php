@@ -259,17 +259,22 @@
 			$("#form-gonder").click(function(){
 				var hata = false;
 				$(".iletisim input, .iletisim textarea").each(function(ind, elem){
+					if($(elem).data("alertclass") != ""){
+						var alert_class = $(elem).data("alertclass");
+					}else{
+						var alert_class = "input-alert";
+					}
 					if($(elem).val() < $(elem).data("minlength") || ($(elem).attr("name") == "email" && $(elem).val().search("@") == "-1")){
 						$(elem).tipTip({
 							activation : "focus",
 							keepAlive: true,
 							defaultPosition: "top"
-						}).focus().parents(".input").addClass("input-alert");
+						}).focus().parents(".input").addClass(alert_class);
 						hata = true;
 						return false;
 					}else{
 						$("div[id^=tiptip_]").remove();
-						$(elem).parents(".input").removeClass("input-alert");
+						$(elem).parents(".input").removeClass(alert_class);
 					}
 				});
 
@@ -636,7 +641,7 @@
 							<div class="input">
 								<input type="text" name="email" placeholder="E-posta" title="Geçerli bir e-posta adresi yazınız!" data-minlength="4">
 							</div>
-							<div class="input textarea">
+							<div class="input textarea" data-alertclass="textarea-alert">
 								<textarea name="message" title="Mesajınızı yazmalısınız" data-minlength="5" placeholder="Yorum"></textarea>
 							</div>
 						</form>
