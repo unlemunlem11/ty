@@ -42,6 +42,7 @@ class Welcome extends CI_Controller {
 		$this->User->facebook_data = json_encode($userdata['me']);
 		$this->User->access_token = $post['access_token'];
 		$this->User->access_token_expire_date = $post['access_token_expire_date'];
+		$this->User->form = 0;
 		
 		$user = $this->User->check();
 		
