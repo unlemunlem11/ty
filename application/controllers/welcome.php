@@ -43,7 +43,7 @@ class Welcome extends CI_Controller {
 		$this->User->access_token = $post['access_token'];
 		$this->User->access_token_expire_date = $post['access_token_expire_date'];
 		$this->User->form = 0;
-		
+
 		$user = $this->User->check();
 		
 		if($user == false){
@@ -53,7 +53,8 @@ class Welcome extends CI_Controller {
 
 	function upload(){
 		sleep(3);
-		$targetFolder = '/casecontest/uploads'; // Relative to the root
+		//$targetFolder = '/casecontest/uploads'; // Relative to the root
+		$targetFolder = '/ty/uploads'; // Relative to the root
 
 		if (!empty($_FILES)) {
 			$tempFile = $_FILES['file']['tmp_name'];
