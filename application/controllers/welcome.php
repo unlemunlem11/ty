@@ -112,4 +112,8 @@ class Welcome extends CI_Controller {
 		$this->Contact->message = $post['message'];
 		echo $this->Contact->create();
 	}
+
+	function sekme(){
+		$this->load->view('sekme');
+	}
 }

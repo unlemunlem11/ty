@@ -1,5 +1,5 @@
 <?php include("head.php");?>
-	<title><?php echo $this->agent->platform()?></title>
+	<title>Bridgestone Tasarım Yarışması</title>
 	<script type="text/javascript">
 
 		window.fbAsyncInit = function() {
@@ -251,7 +251,7 @@
 				}else{
 					var data = $("#kayit-formu").serializeObject();
 					$.post("<?php echo base_url(); ?>welcome/create/", data, function(d){
-						openPage(".yukle");
+						openPage(".katil");
 					});	
 				}
 			});
@@ -575,7 +575,7 @@ var frame = 0;
 		<div class="wrapper">
 			<div class="page page-anasayfa">
 				<div class="sol" style="display:none">
-					<div class="openPage hemenbasvur" data-page=".basvuru"></div>
+					<div class="openPage hemenbasvur" data-page=".kayit"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px">
 					<div style="width:100%;float:left;" class="case3dloading"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;width:40px;"></div>
