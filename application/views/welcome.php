@@ -131,7 +131,7 @@
 		        }
 
 		        if(katilim_kosullari2 == false){
-		        	alert("Katılım koşullarını kabul etmeniz gerekiyor");
+		        	popup_alert("Katılım koşullarını kabul etmeniz gerekiyor");
 		        	return false;
 		        }
 		    }
@@ -140,7 +140,7 @@
 		}
 
 		function popup_alert(d){
-			alert(d)
+			$(".dosyaboyutuhatali .text").text(d).fadeIn();
 		}
 
 		
@@ -251,7 +251,7 @@
 				});
 
 				if(!katilim_kosullari && hata == false){
-					alert("Katılım koşullarını okumanız ve kabul etmeniz gerekiyor.");
+					popup_alert("Katılım koşullarını okumanız ve kabul etmeniz gerekiyor.");
 					hata = true;
 				}
 
@@ -347,6 +347,10 @@
 			 	$(".hemenbasvur-ok").animate({"margin-top": "+=10px"});
 			 }, function(){
 			 	$(".hemenbasvur-ok").animate({"margin-top": "-=10px"});
+			 });
+
+			 $(".kapat").click(function(){
+			 	$(this).parents(".overlay").fadeOut();
 			 });
 
 			 /*
@@ -986,6 +990,13 @@ var frame = 0;
 				<h2>Yarışma Takvimi</h2>
 				<div class="body" style="width:520px; margin:30px;">
 					<img src="<?php echo base_url()?>img/takvim.png">
+				</div>
+			</div>
+
+			<div class="overlay" style="display:none">
+				<div class="alert" style="margin:auto;">
+					<div class="kapat">X</div>
+					<div class="text">Yüklemeye çalıştığınız dosya boyutu max 10MB olmalıdır. Lütfen tekrar deneyiniz.</div>
 				</div>
 			</div>
 
