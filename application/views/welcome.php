@@ -140,7 +140,8 @@
 		}
 
 		function popup_alert(d){
-			$(".dosyaboyutuhatali .text").text(d).fadeIn();
+			$(".alert .text").text(d);
+			$(".alert").fadeIn();
 		}
 
 		
