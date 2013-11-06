@@ -19,11 +19,7 @@ class Welcome extends CI_Controller {
 		if($user == false){
 			echo 0;
 		}else{
-			if ($user['address'] == "") {
-				echo 0;
-			}else{
-				echo 1;	
-			}
+			echo $user['form'];
 		}
 	}
 
