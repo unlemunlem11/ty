@@ -187,7 +187,7 @@
 				});
 			});
 
-			$(".contentHolder").perfectScrollbar();
+			//$(".contentHolder").perfectScrollbar();
 
 			$(".openPage").click(function(){
 				var p = $(this).data("page");
@@ -317,9 +317,20 @@
 				$(".yukleme_yuzde").text(((100 / 81) * loaded).toFixed(0));
 				
 			});
-			
 
-			
+			 $(":range").rangeinput();
+
+			hleft = 0;
+			setInterval(function(){
+				if($(".handle").css("left") != hleft){
+					console.log($(".handle").css("left"));
+					hleft = $(".handle").css("left");
+					$(".caseframe").hide();
+					$(".caseframe" + $("#range").val()).show();
+				}
+			}, 50);
+
+			/*
 			setInterval(function(){
 				nextFrame(frame);
 				if(frame == 80){
@@ -328,8 +339,10 @@
 					frame++;
 				}
 			}, 50);
-			
 
+			*/
+			
+			/*
 			setTimeout(function(){
 				animatePusula();
 				setInterval(function(){
@@ -394,7 +407,7 @@
 				}, 2000);
 			}, 80);
 
-			
+			*/
 
 		});
 
@@ -594,9 +607,19 @@ var frame = 0;
 						<img src="<?php echo base_url(); ?>img/icon/telefon.png" class="icon icon-telefon">
 					</div>
 					<div class="case3d" style="display:none">
-						<?php for($i = 0; $i <= 80; $i++){ ?>
-							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $i;?>">
-						<?php } ?>
+						<?php $k = 0; ?>
+						<?php for($i = 40; $i <= 80; $i++){?>
+							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
+						<?php 
+							$k++;
+						} ?>
+
+						<?php for($i = 0; $i <= 39; $i++){ ?>
+							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
+						<?php $k++; } ?>
+					</div>
+					<div class="slide-wrapper">
+						<input type="range" id="range" min="0" max="80" value="40" style="display:none"/>
 					</div>
 				</div>
 			</div>
@@ -608,7 +631,7 @@ var frame = 0;
 					<br>
 					<p>commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id </p>
 					<span class="openPage btn-lg" data-page=".kayit" style="margin-left:100px;margin-top:40px;">+Başvuru Yap</span>
-					<a href="#" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 
@@ -665,7 +688,7 @@ var frame = 0;
 							<br>
 							<p>- Dosya boyutu max. 1MB olmalıdır.</p>
 							<p>- Destek verilen formatlar; jpg, png, pdf, ai, psd, tif</p>
-							<p>- Yaptığınız çalışmayı vektörel formatta hazırlanması gerekmektedir. </p>
+							<p>- Yaptığınız çalışmanın vektörel formatta hazırlanması gerekmektedir. </p>
 						</div>
 					</div>
 
@@ -691,7 +714,7 @@ var frame = 0;
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
 					<br>
 					<p>commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id </p>
-					<a href="#" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 
@@ -746,17 +769,15 @@ var frame = 0;
 					</div>
 					<div class="body">
 						<h2>Sami <span>Savatlı / </span><span style="font-size:16px;">Endüstri Ürünleri Tasarımcısı</span></h2>
+						
 						<p style="margin-top:20px;">Orta Doğu Teknik Üniversitesi’nde Endüstriyel Tasarım okudu.</p>
-						<br>
-						<p>Ünlü mimar Mahmut Anlar ile birlikte çalıştı, birçok restaurant, gece kulübü projesinde yer aldı.</p>
-						<br>
-						<p>2009 yılında, Nişantaşı’nda kendi tasarım ofisini kurdu. Hala mekan, ürün tasarımı ve tasarım danışmanlığı alanlarında hizmet veriyor.</p>
-						<br>
+						<p>Ünlü mimar Mahmut Anlar ile birlikte çalıştı; birçok restaurant, gece kulübü projesinde yer aldı.</p>
+						<p>2009 yılında, Nişantaşı’nda kendi tasarım ofisini kurdu. Hala mekan, ürün tasarımı ve tasarım danışmanlığı alanlarında hizmet vermektedir.</p>
 						<p>Tasarımlarının arasında Funfatale - Les Ottomans, Joke Circus, Salomanje, Cento Per Cento ve yenilenen Sortie var.</p>
-						<br>
-						<p>2012 yılında “Archive” adlı mobilya ve aydınlatma aksesuarlarının satıldığı galetisini Galata’da açtı.</p>
-						<br>
-						<p>2013 yılında “Elle Decoration” dergisi tarafından düzenlenen Uluslararası EDIDA Tasarım Yarışması’nda 26 ülkenin editöründen oluşan uluslararası jürinin oylaması sonucu ülkemiz adına Yılın genç tasarımcısı “Best Young Designer ” ödülünü aldı.</p>
+						<p>2012 yılında “Archive” adlı mobilya ve aydınlatma aksesuarlarının satıldığı galerisini Galata’da açtı.</p>
+						<p>2013 yılında “Elle Decoration” dergisi tarafından düzenlenen Uluslararası EDIDA Tasarım Yarışması’nda, 26 ülkenin editöründen oluşan uluslararası jürinin oylaması sonucu “Yılın Genç Tasarımcısı - Best Young Designer ” ödülünü aldı.</p>
+
+
 					</div>
 				</div>
 			</div>
@@ -773,17 +794,12 @@ var frame = 0;
 					</div>
 					<div class="body">
 						<h2>Sezgin <span>Akan / </span><span style="font-size:16px">Akademisyen</span></h2>
-						<p>Ankara'da doğdu. Tabeetha School, Tel Aviv ve Kadıköy Anadolu Lisesindeki orta ve lise öğreniminden sonra ODTÜ Endüstriyel Tasarım Bölümü'nden mezun oldu.</p>
-
-						<p>Aynı bölümde 4 yıl araştırma görevlisi ve Bilkent Üniversitesi Mimarlık Bölümünde yarı zamanlı Öğretim görevlisi olarak çalıştı.</p>
-
-						<p>1989 yılında Mehmet Akan ile STÜDYO'yu kurdu. Bugüne kadar 100'ün üzerindeki ofis, banka, restoran ve mağaza iç mekan projesinde proje yöneticisi ve müellif'i olarak çalıştı. STÜDYO ofis mobilyaları koleksiyonunu ve MetalForm'un metal mobilya koleksiyonunu tasarladı.</p>
-
-						<p>Kurucularından olduğu ETMK adına yarışma jüri üyeliği yapmaktadır.</p>
-
-						<p>Sezgin Akan profesyonel programının yanında mücevher tasarımı da yapıyor. Tasarımları İstanbul, Ankara, Londra ve Amsterdam'da solo, karma sergilerde ve galerilerde sergileniyor.</p>
-
-						<p>2004 yılından bu yana ODTÜ Endüstriyel Tasarım Bölümü'nde Jewellery Beyond Tradition' derslerini vermekte. Aynı bölümde 2009 yılından beri Mezuniyet Projeleri' dersine giriyor.</p>
+						<p>Ankara'da doğdu. Tabeetha School, Tel Aviv ve Kadıköy Anadolu Lisesi’ndeki orta ve lise öğreniminden sonra ODTÜ Endüstriyel Tasarım Bölümü'nden mezun oldu.</p>
+						<p>Aynı bölümde 4 yıl araştırma görevlisi ve Bilkent Üniversitesi Mimarlık Bölümü’nde yarı zamanlı öğretim görevlisi olarak çalıştı.</p>
+						<p>1989 yılında Mehmet Akan ile STÜDYO'yu kurdu. Bugüne kadar 100'ün üzerindeki ofis, banka, restoran ve mağaza iç mekan projesinde proje yöneticisi ve müellifi olarak çalıştı. STÜDYO ofis mobilyaları koleksiyonunu ve MetalForm'un metal mobilya koleksiyonunu tasarladı.</p>
+						<p>Sezgin Akan, profesyonel programının yanında mücevher tasarımı da yapmakta ve eserleri İstanbul, Ankara, Londra ve Amsterdam'da solo, karma sergilerde ve galerilerde sergilenmektedir.</p>
+						<p>2004 yılından bu yana ODTÜ Endüstriyel Tasarım Bölümü'nde Jewellery Beyond Tradition dersleri veren Akan, aynı bölümde 2009 yılından beri de Mezuniyet Projeleri dersine girmektedir.</p>
+						<p>Ayrıca, kurucularından olduğu ETMK adına yarışma jüri üyeliği de yapmaktadır.
 					</div>
 				</div>
 			</div>
@@ -800,12 +816,9 @@ var frame = 0;
 					</div>
 					<div class="body">
 						<h2>Elif <span>Cığızoğlu / </span><span style="font-size:16px">Moda Tasarımcısı</span></h2>
-						<p>Marmara Güzel Sanatlar Fakültesinde tekstil tasarımı eğitiminin hemen ardından, sayılı tasarım okullarından biri olan ve Amerika’da bulunan FIT’de eğitimini tamamladı.</p>
-
-						<p>Donna Karan’a stajyer olarak girdi, kısa zaman zarfı içerisinde erkek departmanında tasarımcı olarak çalışmaya başladı.</p>
-
-						<p>2 yıl sonra Türkiye’ye dönüp HakanYıldırım’la çalıştı, sonrasında kendi adını taşıyan markasını yarattı.</p>
-
+						<p>Marmara Güzel Sanatlar Fakültesi’nde Tekstil Tasarımı eğitiminin ardından Amerika’ya gitti ve sayılı tasarım okullarından biri olan FIT’de (Fashion Institute of Technology) ve Paris American Fashion Academy’de moda tasarımı üzerine dersler aldı.</p>
+						<p>Dünyaca ünlü tasarımcı Donna Karan’ın yanında staj yaptı ve kısa zamanda da markanın erkek departmanında tasarımcı olarak çalışmaya başladı.</p>
+						<p>2 yıl sonra Türkiye’ye döndü ve Hakan Yıldırım ile çalıştı. Sonrasında kendi adını taşıyan markasını yarattı.</p>
 					</div>
 				</div>
 			</div>
@@ -823,12 +836,9 @@ var frame = 0;
 					<div class="body">
 						<h2>Umut <span>Eker / </span><span style="font-size:16px">Stylist</span></h2>
 						<p>Umut Eker 1983 yılında Bakırköy'de dünyaya geldi.</p>
-
-						<p>Profesyonel kariyerine Diesel’de çalışarak başladı ve kreatif direktörlüğe kadar yükseldi. 2002 yılında Diesel’den ayrılıp birkaç arkadaşıyla bir street fashion marka kurdu. </p>
-
-						<p>Aynı zamanda stylist kimliği ile aralarında Tarkan’ın da bulunduğu bir çok ünlü isim için stil danışmanlığı yapıyor.</p>
-
-						<p>Şimdilerde kendine ait bir markanın alt yapısını hazırlıyor.</p>
+						<p>Profesyonel kariyerine Diesel’de çalışarak başladı ve kreatif direktörlüğe kadar yükseldi. </p>
+						<p>2002 yılında Diesel’den ayrılıp birkaç arkadaşıyla birlikte bir street fashion markası kurdu. </p>
+						<p>Stylist kimliği ile aralarında Tarkan’ın da bulunduğu bir çok ünlü isim için stil danışmanlığı yapan Eker, şimdilerde kendine ait bir markanın alt yapısını hazırlamaktadır.</p>
 					</div>
 				</div>
 			</div>
@@ -845,13 +855,9 @@ var frame = 0;
 					</div>
 					<div class="body">
 						<h2>Mehmet <span>Erzincan / </span><span style="font-size:16px">Moda Fotoğrafçısı</span></h2>
-						<p>Mehmet Erzincan İstanbulda yaşıyor ve moda ve portre fotoğrafçısı olarak çalışıyor.</p>
-
-						<p>Kocaeli Universitesinde fotoğraf alanında Bachelor of Arts derecesini aldı.</p>
-
-						<p>Mezuniyet sonrası 3 yıl asistanlık yapatıktan sonra moda dergileri ve reklam ajanslarında kendi işini yapmaya başladı.</p>
-
-						<p>Bi çok ünlü isim ve marka için aktif şekilde fotoğraf prodüksiyonları yapmakta.</p>
+						<p>Kocaeli Üniversitesi Fotoğraf Bölümü’nde Bachelor of Arts derecesini aldı.</p>
+						<p>Mezuniyet sonrası 3 yıl asistanlık yaptıktan sonra, moda dergileri ve reklam ajanslarında kendi işini yapmaya başladı.</p>
+						<p>İstanbul’da yaşayan Erzincan, moda ve portre fotoğrafçısı olarak birçok ünlü isim ve marka için aktif şekilde fotoğraf prodüksiyonları yapmaktadır.</p>
 					</div>
 				</div>
 			</div>
@@ -887,7 +893,7 @@ var frame = 0;
 							</p>
 						</div>
 					</div>
-					<a href="#" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 
@@ -907,7 +913,7 @@ var frame = 0;
 							</p>
 						</div>
 					</div>
-					<a href="#" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 

@@ -170,7 +170,7 @@
 }
 
 .page {
-	
+
 	display: none;
 	width: 100%;
 	float:left;
@@ -414,6 +414,6 @@
 .icon-araba {left:120px;top:33px;}
 .icon-pusula {left: 248px;top: 48px;}
 
-
+.slider-bg {float:left; width:150px; background: url('../img/tire.png')}
 
 
