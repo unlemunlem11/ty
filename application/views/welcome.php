@@ -149,8 +149,8 @@
 		}
 
 		function openPage(page){
-			$(".page").hide()
-			$(page).fadeIn();
+			$(".page").slideUp();
+			$(page).slideDown();
 		}
 
 
