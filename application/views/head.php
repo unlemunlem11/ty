@@ -55,7 +55,7 @@
 				font-weight: 100 !important;
 			}
 
-			.page h2, .page .body p, .btn-lg, .textarea textarea, .juri-detay .body h2 span, .juri-detay .title, #tiptip_holder {
+			.page h2, .page .body p, .btn-lg, .textarea textarea, .juri-detay .body h2 span, .juri-detay .title, #tiptip_holder, .case3dloading {
 				font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 				font-weight: 100 !important;
 			}
