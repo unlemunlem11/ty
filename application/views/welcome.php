@@ -200,6 +200,7 @@
 
 			$("#menu #down .body a").click(function(){
 				openPage("." + $(this).attr("href").split("#")[1]);
+				$("#menu #down").fadeOut();
 
 			});
 
