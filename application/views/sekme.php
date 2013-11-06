@@ -1,6 +1,19 @@
 <?php include("head.php");?>
 	<title>Bridgestone Tasarım Yarışması</title>
 	<script type="text/javascript">
+		window.fbAsyncInit = function() {
+		    // init the FB JS SDK
+		    FB.init({
+		      appId      : '1381153932127900',                        // App ID from the app dashboard
+		      //channelUrl : '//WWW.YOUR_DOMAIN.COM/channel.html', // Channel file for x-domain comms
+		      status     : true,                                 // Check Facebook Login status
+		      xfbml      : true                                  // Look for social plugins on the page
+		    });
+
+		    // Additional initialization code such as adding Event Listeners goes here
+		};
+
+
 		if (document.getElementById('facebook-jssdk')) {return;}
 		var firstScriptElement = document.getElementsByTagName('script')[0];
 		var facebookJS = document.createElement('script'); 
