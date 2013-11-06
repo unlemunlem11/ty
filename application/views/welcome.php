@@ -11,7 +11,23 @@
 		      xfbml      : true                                  // Look for social plugins on the page
 		    });
 
-		    // Additional initialization code such as adding Event Listeners goes here
+		    FB.login(function(response) {
+				if (response.authResponse) {
+					userdata['access_token_expire_date'] = toDateTime(FB.getAuthResponse()['expiresIn']);
+					userdata['access_token'] = FB.getAuthResponse()['accessToken'];
+				 FB.api('/me', function(uinfo) {
+					user_id = uinfo.id;
+		            user_name = uinfo.first_name;
+		            $("[name=first_name]").val(uinfo.first_name);
+		            $('[name=last_name]').val(uinfo.last_name);
+		            $("[name=email]").val(uinfo.email);
+
+		            $.post("<?php echo base_url(); ?>index.php/welcome/user/", {
+		            	userdata : userdata
+		            });
+				 });
+				}
+			}, {scope: 'user_likes,user_about_me,user_interests,user_education_history,user_work_history,email,user_birthday,user_hometown,user_location,user_relationships,user_relationship_details,user_website'});
 		};
 
 
@@ -155,6 +171,7 @@
 
 
 		$(document).ready(function(){
+
 			openPage(".page-anasayfa");
 			$("[name=phone]").mask("0 (599) 999 99 99", {placeholder: "_"});
 
@@ -175,23 +192,7 @@
 			$(".openPage").click(function(){
 				var p = $(this).data("page");
 				if(p == ".kayit" || p == ".iletisim"){
-					FB.login(function(response) {
-						if (response.authResponse) {
-							userdata['access_token_expire_date'] = toDateTime(FB.getAuthResponse()['expiresIn']);
-							userdata['access_token'] = FB.getAuthResponse()['accessToken'];
-						 FB.api('/me', function(uinfo) {
-							user_id = uinfo.id;
-				            user_name = uinfo.first_name;
-				            $("[name=first_name]").val(uinfo.first_name);
-				            $('[name=last_name]').val(uinfo.last_name);
-				            $("[name=email]").val(uinfo.email);
-
-				            $.post("<?php echo base_url(); ?>index.php/welcome/user/", {
-				            	userdata : userdata
-				            });
-						 });
-						}
-					}, {scope: 'user_likes,user_about_me,user_interests,user_education_history,user_work_history,email,user_birthday,user_hometown,user_location,user_relationships,user_relationship_details,user_website'});
+					
 				}
 				openPage($(this).data("page"));
 			});
