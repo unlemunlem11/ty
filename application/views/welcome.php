@@ -192,7 +192,7 @@
 			$(".openPage").click(function(){
 				var p = $(this).data("page");
 				if(p == ".kayit"){
-					$.post("<?php echo base_url();?>welcome/user_check/", function(){
+					$.post("<?php echo base_url();?>welcome/user_check/", function(d){
 						if(d > 0){
 							openPage(".yukle");
 						}else{
