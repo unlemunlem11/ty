@@ -15,10 +15,15 @@ class Welcome extends CI_Controller {
 	public function user_check(){
 		$this->load->model('User');
 		$this->User->facebook_id = $this->session->userdata("fid");
-		if($this->User->check() == false){
+		$user = $this->User->check();
+		if($user == false){
 			echo 0;
 		}else{
-			echo 1;
+			if ($user['address'] == "") {
+				echo 0;
+			}else{
+				echo 1;	
+			}
 		}
 	}
 
