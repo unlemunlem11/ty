@@ -332,7 +332,7 @@
 				animatePusula();
 				setInterval(function(){
 					animatePusula();
-				}, 4050);
+				}, 2000);
 			}, 400);
 			
 			//setTimeout(function(){
@@ -347,49 +347,49 @@
 				animateYol();
 				setInterval(function(){
 					animateYol();
-				}, 4050);
+				}, 2000);
 			}, 200);
 
 			setTimeout(function(){
 				animateLike();
 				setInterval(function(){
 					animateLike();
-				}, 4050);
+				}, 2000);
 			}, 1100);
 
 			setTimeout(function(){
 				animatePark();
 				setInterval(function(){
 					animatePark();
-				}, 4050);
+				}, 2000);
 			}, 500);
 
 			setTimeout(function(){
 				animateTrafik();
 				setInterval(function(){
 					animateTrafik();
-				}, 4050);
+				}, 2000);
 			}, 1900);
 
 			setTimeout(function(){
 				animateGunes();
 				setInterval(function(){
 					animateGunes();
-				}, 4050);
+				}, 2000);
 			}, 420);
 
 			setTimeout(function(){
 				animateAraba();
 				setInterval(function(){
 					animateAraba();
-				}, 4050);
+				}, 2000);
 			}, 120);
 
 			setTimeout(function(){
 				animateTabela();
 				setInterval(function(){
 					animateTabela();
-				}, 4050);
+				}, 2000);
 			}, 80);
 
 			
@@ -417,7 +417,9 @@ function animateTelefon(){
 }
 
 function animatePusula(){
-	
+	$(".icon-pusula")
+		.transition({ rotate: '+=360'}, 1000)
+		.transition({ rotate: '-=360', rotate3d: '1,1,0,180deg'}, 1000);
 	/*
 		$(".icon-pusula").css("z-index", "98");
 		setTimeout(function(){
@@ -431,7 +433,11 @@ function animatePusula(){
 }
 
 function animateYol(){
+	$(".icon-yol")
+		.transition({x: "+=10", y: "-=10px", scale:0.9}, 1000)
+		.transition({x: "-=10", y: "+=10px", scale:1}, 1000);
 
+	/*
 		$(".icon-yol").css("z-index", "98");
 		setTimeout(function(){
 			$(".icon-yol").css("z-index", "100");
@@ -440,10 +446,14 @@ function animateYol(){
 	$(".icon-yol").
 		transition({ x: '-=340px', y: '-=30px',  scale: 0.8, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px',y: '-=20px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '+=340px', y: '+=30px', scale: 1.2, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', y: '+=30px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+	*/
 }
 
 function animateLike(){
-
+	$(".icon-like")
+		.transition({rotate: "+=10px", x:'+=10', y: '-=10px'}, 1000)
+		.transition({rotate: "-=10px", x:'-=10', y: '+=10px'}, 1000)
+	/*
 		$(".icon-like").css("z-index", "100");
 		setTimeout(function(){
 			$(".icon-like").css("z-index", "98");
@@ -452,10 +462,14 @@ function animateLike(){
 	$(".icon-like").		
 		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+		*/
 }
 
 function animateTabela(){
-
+	$(".icon-tabela")
+		.transition({scale:1.2, x: '-=10px'}, 1000)
+		.transition({scale:1, x: '+=10px'}, 1000)
+	/*
 	$(".icon-tabela").css("z-index", "100");
 		setTimeout(function(){
 			$(".icon-tabela").css("z-index", "98");
@@ -464,10 +478,14 @@ function animateTabela(){
 	$(".icon-tabela").
 		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+		*/
 }
 
 function animatePark(){
-
+	$(".icon-park")
+		.transition({x:'-=10', scale: 1.1}, 1000)
+		.transition({x:'+=10', scale: 1}, 1000);
+	/*
 		$(".icon-park").css("z-index", "100");
 		setTimeout(function(){
 			$(".icon-park").css("z-index", "98");
@@ -476,10 +494,14 @@ function animatePark(){
 	$(".icon-park").
 		transition({ x: '+=340px',y: '+=40px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', y: '+=30px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '-=100px',y: '-=40px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=340px', y: '-=30px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+		*/
 }
 
 function animateTrafik(){
-
+	$(".icon-trafik")
+		.transition({x: "+=10px", rotate: '+=10'}, 1000)
+		.transition({x: "-=10px", rotate: '-=10'}, 1000);
+	/*
 		$(".icon-trafik").css("z-index", "100");
 		setTimeout(function(){
 			$(".icon-trafik").css("z-index", "98");
@@ -488,11 +510,14 @@ function animateTrafik(){
 	$(".icon-trafik").
 		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+		*/
 }
 
 function animateGunes(){
-
-		
+	$(".icon-gunes")
+		.transition({x: "+=10px", scale: 1.2, y: "-=10px"}, 1000)
+		.transition({x: "-=10px", scale: 1, y: "+=10px"}, 1000)
+	/*		
 		$(".icon-gunes").css("z-index", "100");
 		setTimeout(function(){
 			$(".icon-gunes").css("z-index", "98");	
@@ -501,9 +526,14 @@ function animateGunes(){
 	$(".icon-gunes").
 		transition({ x: '+=240px', scale: 0.8, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '-=240px', scale: 1.2, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+		*/
 }
 
 function animateAraba(){
+	$(".icon-araba")
+		.transition({x:'-=10', rotate: '+=10px', y: '-=10px'}, 1000)
+		.transition({x:'+=10', rotate: '-=10px', y: '+=10px'}, 1000);
+	/*
 	$(".icon-araba").transition({
 		  perspective : '+=100px',
 		  rotateY: '+=180deg'
