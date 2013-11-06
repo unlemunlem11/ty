@@ -12,6 +12,16 @@ class Welcome extends CI_Controller {
 		
 	}
 
+	public function user_check(){
+		$this->load->model('User');
+		$this->User->facebook_id = $this->session->userdata("fid");
+		if($this->User->check() == false){
+			echo 0;
+		}else{
+			echo 1;
+		}
+	}
+
 	public function user(){		
 		$post = $this->input->post('userdata');
 		$this->facebook->setAccessToken($post['access_token']);

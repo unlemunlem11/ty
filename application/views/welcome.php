@@ -191,10 +191,17 @@
 
 			$(".openPage").click(function(){
 				var p = $(this).data("page");
-				if(p == ".kayit" || p == ".iletisim"){
-					
+				if(p == ".kayit"){
+					$.post("<?php echo base_url();?>welcome/user_check/", function(){
+						if(d > 0){
+							openPage(".yukle");
+						}else{
+							openPage(".kayit");
+						}
+					});
+				}else{
+					openPage($(this).data("page"));	
 				}
-				openPage($(this).data("page"));
 			});
 
 
