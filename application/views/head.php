@@ -14,9 +14,11 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url()?>css/tipTip.css">
 	<link rel="stylesheet" href="<?php  echo base_url();?>js/perfect-scrollbar.css">
 	<link rel="stylesheet" type="text/css" href="<?php  echo base_url();?>css/skin1.css">
+	<link rel="stylesheet" type="text/css" href="<?php  echo base_url();?>css/ui-lightness/jquery-ui-1.10.3.custom.css">
+	
 	<!-- JS -->
 
-	
+
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery_v.2.0.3.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.serializeObject.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.tipTip.minified.js"></script>
@@ -25,7 +27,7 @@
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.transit.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/imagesloaded.js"></script>
-	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.tools.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>js/jquery-ui-1.10.3.custom.min.js"></script>
 
 
 	

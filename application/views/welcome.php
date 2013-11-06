@@ -303,7 +303,7 @@
 				}
 			});
 
-			$(".case3d img:first-child").fadeIn();
+			$(".case3d img.caseframe40").fadeIn();
 			$(".case3d img").load(function(){
 				loaded++;
 				if(loaded == 81){
@@ -318,7 +318,31 @@
 				
 			});
 
-			 $(":range").rangeinput();
+			 $( "#slider" ).slider({
+			 	min : 0,
+			 	max : 80,
+			 	value : 40,
+			 	slide : function(event, ui){
+			 		$(".caseframe").hide();
+					$(".caseframe" + ui.value).show();
+					if(ui.value >= 40){
+						var deg = ui.value - 40;
+					}else{
+						var deg = "-" + (40 - ui.value);
+					}
+					console.log("val " + ui.value);
+					console.log("deg " + deg);
+					$(".icon").transition({rotate: deg},1);
+			 	}
+			 });
+
+			 $(".hemenbasvur").hover(function(){
+			 	$(".hemenbasvur-ok").animate({"margin-top": "+=10px"});
+			 }, function(){
+			 	$(".hemenbasvur-ok").animate({"margin-top": "-=10px"});
+			 });
+
+			 /*
 
 			hleft = 0;
 			setInterval(function(){
@@ -327,8 +351,11 @@
 					hleft = $(".handle").css("left");
 					$(".caseframe").hide();
 					$(".caseframe" + $("#range").val()).show();
+					
 				}
 			}, 50);
+
+*/
 
 			/*
 			setInterval(function(){
@@ -412,6 +439,7 @@
 		});
 
 var loaded = 0;
+
 
 function animateTelefon(){
 	$(".icon-telefon")
@@ -590,6 +618,9 @@ var frame = 0;
 		<div class="wrapper">
 			<div class="page page-anasayfa">
 				<div class="sol" style="display:none">
+					<div style="float:left; width:100px;height: 65px;margin-left: 100px;margin-top: 62px;">
+						<img src="<?php echo base_url();?>img/ok.png" class="hemenbasvur-ok">
+					</div>
 					<div class="openPage hemenbasvur" data-page=".kayit"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px">
@@ -618,8 +649,8 @@ var frame = 0;
 							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
 						<?php $k++; } ?>
 					</div>
-					<div class="slide-wrapper">
-						<input type="range" id="range" min="0" max="80" value="40" style="display:none"/>
+					<div class="slide-wrapper" style="margin-top:-32px;position:relative; z-index:99">
+						<div id="slider" style="width:300px;margin-left:16px;"></div>
 					</div>
 				</div>
 			</div>
