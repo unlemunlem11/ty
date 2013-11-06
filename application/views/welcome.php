@@ -252,7 +252,7 @@
 				}else{
 					var data = $("#kayit-formu").serializeObject();
 					$.post("<?php echo base_url(); ?>welcome/create/", data, function(d){
-						openPage(".katil");
+						openPage(".yukle");
 					});	
 				}
 			});
