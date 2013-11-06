@@ -335,12 +335,12 @@
 				}, 4050);
 			}, 400);
 			
-			setTimeout(function(){
+			//setTimeout(function(){
 				animateTelefon();
 				setInterval(function(){
 					animateTelefon();
-				}, 4050);
-			}, 2000);
+				}, 2000);
+			//}, 2000);
 
 
 			setTimeout(function(){
@@ -399,7 +399,11 @@
 var loaded = 0;
 
 function animateTelefon(){
-	
+	$(".icon-telefon")
+		.transition({x: '+=10px', rotate: '+=10deg', y : '+=10px', scale: 1.1}, 1000)
+		.transition({x: '-=10px', rotate: '-=10deg', y : '-=10px', scale: 1}, 1000);
+
+	/*
 		$(".icon-telefon").css("z-index", "98");
 		setTimeout(function(){
 			$(".icon-telefon").css("z-index", "100");
@@ -408,10 +412,13 @@ function animateTelefon(){
 	$(".icon-telefon").
 		transition({ x: '-=340px', y: '-=30px', scale: 0.8, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=200px', y: '-=30px', scale: 1 , perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '+=340px', y: '+=30px', scale: 1.2, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=200px', y: '+=30px', scale: 1 , perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+
+		*/
 }
 
 function animatePusula(){
-
+	
+	/*
 		$(".icon-pusula").css("z-index", "98");
 		setTimeout(function(){
 			$(".icon-pusula").css("z-index", "100");
@@ -420,6 +427,7 @@ function animatePusula(){
 	$(".icon-pusula").
 		transition({ x: '-=240px', y: '+=30px', scale: 0.8, perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '-=100px', y: '+=20px', scale: 1 ,perspective : '+=50px',rotateY: '+=90deg'}, 1000, 'cubic-bezier(.34,.96,.83,.99)').
 		transition({ x: '+=240px', y: '-=30px', scale: 1.3, perspective : '-=50px',rotateY: '-=90deg'}, 1000, 'cubic-bezier(.79,.41,.92,.71)').transition({ x: '+=100px', y: '-=20px', scale: 1 ,perspective : '-=50px',rotateY: '-=90deg'}, 1050, 'cubic-bezier(.34,.96,.83,.99)');
+		*/
 }
 
 function animateYol(){

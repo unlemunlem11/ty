@@ -162,7 +162,7 @@
 }
 
 .content .pop {
-	background-color: rgb(253, 253, 253);
+	background-color: rgba(253, 253, 253, 0.8);
 	width: 100%;
 	height: 507px;
 	border-radius: 10px;
@@ -404,7 +404,7 @@
 .icon {position:absolute;z-index:2;}
 .icon-araba {left:96px;top:-30px;}
 .icon-yol {left:318px; top:350px;}
-.icon-telefon {left: 392px; top:118px;}
+.icon-telefon {left: 232px; top:118px;}
 .icon-like {left: 5px; top:400px;}
 .icon-tabela {left:-5px; top:329px;}
 .icon-park {left: -50px; top:240px;}
