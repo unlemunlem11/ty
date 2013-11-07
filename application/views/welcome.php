@@ -361,6 +361,10 @@
 				}
 			}, 50);
 
+			$(".pagekapat").click(function(){
+				openPage(".page-anasayfa");
+			});
+
 			
 
 			 /*
@@ -671,6 +675,7 @@ var frame = 0;
 
 			<div class="page pop basvuru casebg">
 				<h2>Başvuru</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px;">
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
 					<br>
@@ -682,6 +687,7 @@ var frame = 0;
 
 			<div class="page pop kayit casebg">
 				<h2>Kayıt</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px;">
 					<div style="float:left; margin-left:30px;">
 						<form id="kayit-formu">
@@ -713,6 +719,7 @@ var frame = 0;
 
 			<div class="page pop yukle casebg">
 				<h2>Tasarımını Yükle</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px;">
 					<div id="upload-content">
 						<div class="input fileinput" style="margin-top:91px; margin-left:20px;">
@@ -746,6 +753,7 @@ var frame = 0;
 
 			<div class="page pop odullistesi">
 				<h2>Ödül Listesi</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px;">
 					<img src="<?php echo base_url()?>img/oduller.png" style="float:left; margin-left:54px;">
 				</div>
@@ -753,6 +761,7 @@ var frame = 0;
 
 			<div class="page pop yarismatemasi casebg">
 				<h2>Yarışma Teması</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px; line-height:20px;">
 					<p style="font-size:18px;"><span style="font-weight:bold;">Konsept:</span>Akıllı Telefon Case Yarışması</p>
 					<br>
@@ -765,6 +774,7 @@ var frame = 0;
 
 			<div class="page pop juri">
 				<h2>Jüri</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="margin:30px; line-height:20px;">
 					<div style="width:630px; float:left; margin-left:145px;">
 						<div class="juri-item openPage" data-page=".juri1" style="background: url('<?php echo base_url()?>img/juri/1.png') no-repeat">
@@ -804,6 +814,7 @@ var frame = 0;
 
 			<div class="page pop juri1">
 				<h2 style="margin-bottom:0px; !important">Jüri</h2>
+				<span class="pagekapat" style="margin-top:-49px">X</span>
 				<div class="body juri-detay">
 					<div style="width:180px;float:left;">
 						<img src="<?php echo base_url()?>img/juri/1.png">
@@ -829,6 +840,7 @@ var frame = 0;
 
 			<div class="page pop juri3">
 				<h2 style="margin-bottom:0px; !important">Jüri</h2>
+				<span class="pagekapat" style="margin-top:-49px">X</span>
 				<div class="body juri-detay">
 					<div style="width:180px;float:left;">
 						<img src="<?php echo base_url()?>img/juri/3.png">
@@ -851,6 +863,7 @@ var frame = 0;
 
 			<div class="page pop juri4">
 				<h2 style="margin-bottom:0px; !important">Jüri</h2>
+				<span class="pagekapat" style="margin-top:-49px">X</span>
 				<div class="body juri-detay">
 					<div style="width:180px;float:left;">
 						<img src="<?php echo base_url()?>img/juri/4.png">
@@ -870,6 +883,7 @@ var frame = 0;
 
 			<div class="page pop juri5">
 				<h2 style="margin-bottom:0px; !important">Jüri</h2>
+				<span class="pagekapat" style="margin-top:-49px">X</span>
 				<div class="body juri-detay">
 					<div style="width:180px;float:left;">
 						<img src="<?php echo base_url()?>img/juri/5.png">
@@ -890,6 +904,7 @@ var frame = 0;
 
 			<div class="page pop juri6">
 				<h2 style="margin-bottom:0px; !important">Jüri</h2>
+				<span class="pagekapat" style="margin-top:-49px">X</span>
 				<div class="body juri-detay">
 					<div style="width:180px;float:left;">
 						<img src="<?php echo base_url()?>img/juri/6.png">
@@ -909,6 +924,7 @@ var frame = 0;
 
 			<div class="page pop juri7">
 				<h2 style="margin-bottom:0px; !important">Jüri</h2>
+				<span class="pagekapat" style="margin-top:-49px">X</span>
 				<div class="body juri-detay">
 					<div style="width:180px;float:left;">
 						<img src="<?php echo base_url()?>img/juri/7.png">
@@ -924,6 +940,7 @@ var frame = 0;
 			</div>
 			<div class="page pop yarismahakkinda casebg">
 				<h2>Yarışma Hakkında</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style=" margin:30px; line-height:20px;">
 					<div class="contentHolder" style="float:left;">
 						<div style="float:left;width:400px; height:400px;" class="scrollcontent">
@@ -944,6 +961,7 @@ var frame = 0;
 
 			<div class="page pop kullanimkosullari casebg">
 				<h2>Katılım Koşulları</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style=" margin:30px; line-height:20px;">
 					<div class="contentHolder" style="float:left;">
 						<div style="float:left;width:400px; height:400px;" class="scrollcontent">
@@ -964,6 +982,7 @@ var frame = 0;
 
 			<div class="page pop iletisim casebg">
 				<h2>İletişim</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px;">
 					<div id="iletisim-formu-wrapper" style="float:left; margin-left:30px;">
 						<form id="iletisim-formu">
@@ -991,6 +1010,7 @@ var frame = 0;
 
 			<div class="page pop takvim casebg">
 				<h2>Yarışma Takvimi</h2>
+				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px;">
 					<img src="<?php echo base_url()?>img/takvim.png">
 				</div>

@@ -461,3 +461,22 @@
 	z-index: 1000;
 }
 
+.pagekapat {
+	float: right;
+	margin-top: -78px;
+	margin-right: 18px;
+	color: #e82a2a;
+	font-family: comic sans ms;
+	background: rgba(255, 255, 255, 0.47);
+	border-radius: 25px;
+	padding: 4px;
+	height: 16px;
+	width: 16px;
+	text-indent: 2px;
+	cursor: pointer;
+}
+
+.pagekapat:hover {
+	background: rgba(255, 255, 255, 0.2);
+}
+
