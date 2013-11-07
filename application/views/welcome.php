@@ -319,6 +319,14 @@
 					$(".case3d").fadeIn();
 					$(".sol").fadeIn();
 					$(".case3dloading").hide();
+					var don = setInterval(function(){
+						if(frame == 40){
+							clearInterval(don);
+						}else{
+							nextFrame(frame);
+							frame++;
+						}
+					}, 50);
 				}
 
 				$(".yukleme_yuzde").text(((100 / 81) * loaded).toFixed(0));
@@ -352,14 +360,6 @@
 			 });
 
 			
-			var don = setInterval(function(){
-				if(frame == 40){
-					clearInterval(don);
-				}else{
-					nextFrame(frame);
-					frame++;
-				}
-			}, 50);
 
 			$(".pagekapat").click(function(){
 				openPage(".page-anasayfa");
