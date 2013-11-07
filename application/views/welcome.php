@@ -98,7 +98,7 @@
 		    //document.getElementById(div_id).innerHTML = "Uploading...";
 		}
 
-		function checkFileSize(inputid) {
+		function checkFileSize(inputid, kayitform) {
 		    var input, file;
 
 
@@ -134,10 +134,13 @@
 		        	return false;
 		        }
 
-		        if(katilim_kosullari2 == false){
-		        	popup_alert("Katılım koşullarını kabul etmeniz gerekiyor");
-		        	return false;
+		        if(kayitform == false){
+		        	if(katilim_kosullari2 == false){
+			        	popup_alert("Katılım koşullarını kabul etmeniz gerekiyor");
+			        	return false;
+			        }	
 		        }
+		        
 		    }
 
 		    return true;
@@ -265,7 +268,7 @@
 				if(hata == true){
 					return false;
 				}else{
-					if(checkFileSize("tasariminput2")){
+					if(checkFileSize("tasariminput2"), true){
 						fileUpload(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action", true);
 					}else{
 						return false;
@@ -321,7 +324,7 @@
 			});
 
 			$("#tasarimyukle_buton").click(function(){
-				if(checkFileSize("tasariminput")){
+				if(checkFileSize("tasariminput", false)){
 					fileUpload(document.getElementById("fileform"), "<?php base_url() ?>welcome/upload/", "upload_action", false);
 				}
 			});
