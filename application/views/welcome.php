@@ -141,7 +141,7 @@
 
 		function popup_alert(d){
 			$(".alert .text").text(d);
-			$(".alert").fadeIn();
+			$(".overlay").fadeIn();
 		}
 
 		
