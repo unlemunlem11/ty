@@ -319,7 +319,6 @@
 					$(".case3d").fadeIn();
 					$(".sol").fadeIn();
 					$(".case3dloading").hide();
-
 				}
 
 				$(".yukleme_yuzde").text(((100 / 81) * loaded).toFixed(0));
@@ -338,8 +337,6 @@
 					}else{
 						var deg = "-" + (40 - ui.value);
 					}
-					console.log("val " + ui.value);
-					console.log("deg " + deg);
 					$(".icon").transition({rotate: deg},1);
 			 	}
 			 });
@@ -351,8 +348,20 @@
 			 });
 
 			 $(".kapat").click(function(){
-			 	$(this).parents(".overlay").fadeOut();
+				$(this).parents(".overlay").fadeOut();
 			 });
+
+			
+			var don = setInterval(function(){
+				nextFrame(frame);
+				if(frame == 80){
+					clearInterval(don);
+				}else{
+					frame++;
+				}
+			}, 50);
+
+
 
 			 /*
 
@@ -370,14 +379,7 @@
 */
 
 			/*
-			setInterval(function(){
-				nextFrame(frame);
-				if(frame == 80){
-					frame = 0;
-				}else{
-					frame++;
-				}
-			}, 50);
+			
 
 			*/
 			
