@@ -32,7 +32,7 @@
 
 
 
-		function fileUpload(form, action_url, div_id) {
+		function fileUpload(form, action_url, div_id, kayitform) {
 		    // Create the iframe...
 		    var iframe = document.createElement("iframe");
 		    iframe.setAttribute("id", "upload_iframe");
@@ -64,10 +64,14 @@
 		            }
 		 
 		 			if(content == 1){
-		 				openPage(".yukle");
-		 				$("#upload-content").fadeOut(function(){
-		 					$("#upload-success").fadeIn();
-		 				});
+		 				if(kayitform){
+		 					file_upload_action = true;
+		 				}else{
+			 				openPage(".yukle");
+			 				$("#upload-content").fadeOut(function(){
+			 					$("#upload-success").fadeIn();
+			 				});
+			 			}
 		 			}
 		            //document.getElementById(div_id).innerHTML = content;
 		 
@@ -158,6 +162,7 @@
 		var user_id;
 		var user_name;
 		var userdata = {};
+		var file_upload_action = false;
 
 		function toDateTime(secs){
 		    var t = new Date();
@@ -256,13 +261,15 @@
 					hata = true;
 				}
 
-				if(checkFileSize("tasariminput")){
-					fileUpload(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action");
-				}
 
 				if(hata == true){
 					return false;
 				}else{
+					if(checkFileSize("tasariminput2")){
+						fileUpload(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action", true);
+					}else{
+						return false;
+					}
 					var data = $("#kayit-formu").serializeObject();
 					$.post("<?php echo base_url(); ?>welcome/create/", data, function(d){
 						openPage(".yukle");
@@ -309,9 +316,13 @@
 				$("#tasarimfilename").val($(".hiddeninput").val());
 			});
 
+			$("#tasariminput2").change(function(){
+				$("#tasarimfilename2").val($("#tasariminput2").val());
+			});
+
 			$("#tasarimyukle_buton").click(function(){
 				if(checkFileSize("tasariminput")){
-					fileUpload(document.getElementById("fileform"), "<?php base_url() ?>welcome/upload/", "upload_action");
+					fileUpload(document.getElementById("fileform"), "<?php base_url() ?>welcome/upload/", "upload_action", false);
 				}
 			});
 
@@ -722,7 +733,7 @@ var frame = 0;
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
 							Katılım koşullarını okudum ve kabul ediyorum.
 						</p>
-						<span class="btn-lg" id="katil" style="margin-left:100px;margin-top:40px;">+ Katıl</span>
+						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
 					</div>
 				</div>
 			</div>
