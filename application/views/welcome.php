@@ -345,7 +345,7 @@
 					}else{
 						var deg = "-" + (40 - ui.value);
 					}
-					$(".icon").transition({rotate: deg},1);
+					//$(".icon").transition({rotate: deg},1);
 			 	}
 			 });
 
@@ -705,6 +705,12 @@ var frame = 0;
 							</div>
 							<div class="input">
 								<input type="text" name="university" placeholder="Üniversite" title="Üniversitenizi yazınız!" data-minlength="3">
+							</div>
+							<div class="input fileinput" style="margin-top:91px; margin-left:20px;">
+								<input type="text" placeholder="Dosya Adı" id="tasarimfilename">
+								<form id="fileform">
+									<input type="file" name="file" class="hiddeninput" id="tasariminput">
+								</form>
 							</div>
 						</form>
 						<p style="width: 100%;float: left;line-height: 35px;margin-left: 46px;margin-top: 20px;text-indent: 4px;" id="katilim-kosullari-text" title="Katılım koşullarını okumanız ve kabul etmeniz gerekiyor!">
