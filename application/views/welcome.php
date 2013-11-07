@@ -353,15 +353,15 @@
 
 			
 			var don = setInterval(function(){
-				nextFrame(frame);
-				if(frame == 80){
+				if(frame == 40){
 					clearInterval(don);
 				}else{
+					nextFrame(frame);
 					frame++;
 				}
 			}, 50);
 
-
+			
 
 			 /*
 
