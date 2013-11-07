@@ -256,6 +256,10 @@
 					hata = true;
 				}
 
+				if(checkFileSize("tasariminput")){
+					fileUpload(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action");
+				}
+
 				if(hata == true){
 					return false;
 				}else{
@@ -706,10 +710,10 @@ var frame = 0;
 							<div class="input">
 								<input type="text" name="university" placeholder="Üniversite" title="Üniversitenizi yazınız!" data-minlength="3">
 							</div>
-							<div class="input fileinput" style="margin-top:91px; margin-left:20px;">
-								<input type="text" placeholder="Dosya Adı" id="tasarimfilename">
-								<form id="fileform">
-									<input type="file" name="file" class="hiddeninput" id="tasariminput">
+							<div class="input fileinput">
+								<input type="text" placeholder="Dosya Adı" id="tasarimfilename2">
+								<form id="fileform2">
+									<input type="file" name="file" class="hiddeninput" id="tasariminput2">
 								</form>
 							</div>
 						</form>
