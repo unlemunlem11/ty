@@ -724,13 +724,13 @@ var frame = 0;
 							<div class="input">
 								<input type="text" name="university" placeholder="Üniversite" title="Üniversitenizi yazınız!" data-minlength="3">
 							</div>
-							<div class="input fileinput">
-								<input type="text" placeholder="Dosya Adı" id="tasarimfilename2">
-								<form id="kayitfileform">
-									<input type="file" name="file" class="hiddeninput" id="tasariminput2">
-								</form>
-							</div>
 						</form>
+						<div class="input fileinput">
+							<input type="text" placeholder="Dosya Adı" id="tasarimfilename2">
+							<form id="fileform2">
+								<input type="file" name="file" class="hiddeninput" id="tasariminput2">
+							</form>
+						</div>
 						<p style="width: 100%;float: left;line-height: 35px;margin-left: 46px;margin-top: 20px;text-indent: 4px;" id="katilim-kosullari-text" title="Katılım koşullarını okumanız ve kabul etmeniz gerekiyor!">
 							<img src="<?php echo base_url()?>img/checkbox.png" style="margin-top:6px; float:left;cursor:pointer">
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
