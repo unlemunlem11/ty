@@ -325,7 +325,7 @@
 			});
 
 			$("#tasariminput").change(function(){
-				$("#tasarimfilename").val($(".hiddeninput").val());
+				$("#tasarimfilename").val($("#tasariminput").val());
 			});
 
 			$("#tasariminput2").change(function(){
@@ -737,7 +737,7 @@ var frame = 0;
 						<div class="input fileinput">
 							<input type="text" placeholder="Dosya Adı" id="tasarimfilename2">
 							<form id="fileform2">
-								<input type="file" name="file" class="hiddeninput" id="tasariminput2" style="float:right; margin-top:-45px;">
+								<input type="file" name="file" class="hiddeninput" id="tasariminput2" style="float:right; margin-top:-70px;">
 							</form>
 						</div>
 						<p style="width: 100%;float: left;line-height: 35px;margin-left: 46px;margin-top: 20px;text-indent: 4px;" id="katilim-kosullari-text" title="Katılım koşullarını okumanız ve kabul etmeniz gerekiyor!">
