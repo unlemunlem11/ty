@@ -681,7 +681,9 @@ var frame = 0;
 					<div class="openPage hemenbasvur" data-page=".kayit"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px; margin-top:-58px;">
-					<div style="width:100%;float:left;" class="case3dloading"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;"></div>
+					<div style="width:100%;float:left;" class="case3dloading">
+						<img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;">
+					</div>
 					<div style="width:100%;float:left;text-align:center;color:white;margin-left: 141px;margin-top: 12px;" class="case3dloading">Yükleniyor (<span class="yukleme_yuzde"></span>)</div>
 					<div class="icons" style="position:absolute; display:none;">
 						<img src="<?php echo base_url(); ?>img/icon/araba.png" class="icon icon-araba">
@@ -757,7 +759,9 @@ var frame = 0;
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
 							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
-						<div style="width:100%;float:left;" ><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"></div>
+						<div style="width:100%;float:left;" >
+							<img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;">
+						</div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
 					</div>
 					<div style="float: left;width: 316px;text-align: center;">
