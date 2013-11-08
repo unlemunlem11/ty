@@ -93,13 +93,6 @@
 		 
 		 	if(kayitform){
 			 	$("#katil").fadeOut(function(){
-			 		var cl = new Loader('Loader-container1');
-					cl.setColor('#ffffff'); // default is '#000000'
-					cl.setDiameter(57); // default is 40
-					cl.setDensity(60); // default is 40
-					cl.setRange(1); // default is 1.3
-					cl.setFPS(22); // default is 24
-					cl.show(); // Hidden by default
 			 		$(".kayit .loading").fadeIn();
 			 	});
 		 	}else{
@@ -675,7 +668,7 @@ var frame = 0;
 					<div class="openPage hemenbasvur" data-page=".kayit"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px; margin-top:-58px;">
-					<div style="width:100%;float:left;" class="case3dloading"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;width:40px;"></div>
+					<div style="width:100%;float:left;" class="case3dloading"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;"></div>
 					<div style="width:100%;float:left;text-align:center;color:white;margin-left: 141px;margin-top: 12px;" class="case3dloading">Yükleniyor (<span class="yukleme_yuzde"></span>)</div>
 					<div class="icons" style="position:absolute; display:none;">
 						<img src="<?php echo base_url(); ?>img/icon/araba.png" class="icon icon-araba">
@@ -751,7 +744,7 @@ var frame = 0;
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
 							Katılım koşullarını okudum ve kabul ediyorum.
 						</p>
-						<div style="width:100%;float:left;" ><?php /* <img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"> */?></div>
+						<div style="width:100%;float:left;" ><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"></div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
 					</div>
 				</div>
@@ -774,7 +767,7 @@ var frame = 0;
 							Katılım koşullarını okudum ve kabul ediyorum.
 						</p>
 						<span class="btn-lg" id="tasarimyukle_buton" style="margin-left:100px;margin-top:18px;">+Tasarımını Yükle</span>
-						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;margin-top:30px;width:40px;"></div>
+						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;margin-top:30px;"></div>
 						<div style="width:500px;float:left;" class="uyarilar">
 							<p style="font-weight:bold;">Uyarılar:</p>
 							<br>
