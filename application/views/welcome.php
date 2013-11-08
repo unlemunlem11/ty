@@ -758,7 +758,7 @@ var frame = 0;
 							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
 						<div style="width:100%;float:left;" >
-							<img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;">
+							<img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:320px;margin-top:130px;">
 						</div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
 					</div>
