@@ -391,6 +391,7 @@
 				openPage(".page-anasayfa");
 			});
 
+			$(".loading").canvasLoader({color:"red"});
 			
 
 			 /*
