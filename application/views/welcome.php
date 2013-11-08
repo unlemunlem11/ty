@@ -191,6 +191,7 @@
 		$(document).ready(function(){
 
 			openPage(".page-anasayfa");
+			
 			$("[name=phone]").mask("0 (599) 999 99 99", {placeholder: "_"});
 
 			$("#menu").hover(function(){
@@ -205,7 +206,7 @@
 				});
 			});
 
-			//$(".contentHolder").perfectScrollbar();
+			$(".contentHolder").perfectScrollbar();
 
 			$(".openPage").click(function(){
 				var p = $(this).data("page");
@@ -407,7 +408,12 @@
 				openPage(".page-anasayfa");
 			});
 
-			$(".loading").canvasLoader({color:"white"});
+			var cl = new CanvasLoader('loading1');
+			cl.setColor('#ffffff'); // default is '#000000'
+			cl.setDiameter(47); // default is 40
+			cl.setDensity(58); // default is 40
+			cl.setRange(1.1); // default is 1.3
+			cl.show(); // Hidden by default
 			
 
 			 /*
@@ -685,7 +691,9 @@ var frame = 0;
 					<div class="openPage hemenbasvur" data-page=".kayit"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px; margin-top:-58px;">
-					<div style="width:100%;float:left;" class="case3dloading"><img src="<?php echo base_url();?>img/loader2.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;"></div>
+					<div style="width:100%;float:left;" class="case3dloading">
+						<div id="loading1" style="float:left;margin-left:320px;margin-top:130px;"></div>
+					</div>
 					<div style="width:100%;float:left;text-align:center;color:white;margin-left: 141px;margin-top: 12px;" class="case3dloading">Yükleniyor (<span class="yukleme_yuzde"></span>)</div>
 					<div class="icons" style="position:absolute; display:none;">
 						<img src="<?php echo base_url(); ?>img/icon/araba.png" class="icon icon-araba">
@@ -728,11 +736,11 @@ var frame = 0;
 				</div>
 			</div>
 
-			<div class="page pop kayit casebg">
+			<div class="page pop kayit">
 				<h2>Kayıt</h2>
 				<span class="pagekapat">X</span>
-				<div class="body" style="width:520px; margin:30px;">
-					<div style="float:left; margin-left:30px;">
+				<div class="body" style="margin:30px;">
+					<div style="float:left; margin-left:30px; width:490px;">
 						<form id="kayit-formu">
 							<div class="input">
 								<input type="text" name="first_name" placeholder="Ad" title="İsminizi giriniz!" data-minlength="3">
@@ -763,6 +771,13 @@ var frame = 0;
 						</p>
 						<div style="width:100%;float:left;" ><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"></div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
+					</div>
+					<div style="float: left;width: 316px;text-align: center;">
+						<p style="margin-top:78px">Yarışma kapsamında değerlendirmeye alınacak <br>
+							tasarımlarda lastik veya emniyet konseptinde <br>
+									hazırlanmış olma şartı aranmaktadır.</p><br><br>
+									<p>Tasarım kitini buradan indirebilirsiniz.</p>
+									<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir" style="margin-left:18px; margin-top:44px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 					</div>
 				</div>
 			</div>
@@ -815,9 +830,11 @@ var frame = 0;
 				<div class="body" style="width:520px; margin:30px; line-height:20px;">
 					<p style="font-size:18px;"><span style="font-weight:bold;">Konsept:</span>Akıllı Telefon Case Yarışması</p>
 					<br>
-					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+					<p>Bridgestone olarak, üniversitelerin Güzel Sanatlar Fakültelerinde öğrenim gören, yeni mezun ya da yeteneğine güvenen her daldan sanatçıyı günlük hayatın vazgeçilmez bir parçası haline gelen akıllı telefonlara case tasarlamaya davet ediyoruz! </p>
 					<br>
-					<p>commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id </p>
+					<p>Tasarım ve teknolojinin mükemmel uyumunu yakalamak için çıktığımız yolda “emniyet”e verdiğimiz önemi kendi tasarımlarına aktarabilecek genç yetenekler! Bridgestone Tasarım Yarışması büyük ödülleriyle sizi bekliyor…</p>
+					<br>
+					<p>Eğer sen de emniyet ve/veya lastiği tasarımlarımda en yaratıcı olarak ben kullanırım diyorsan; durma, tasarla, gönder!</p>
 					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
@@ -999,15 +1016,96 @@ var frame = 0;
 				<div class="body" style=" margin:30px; line-height:20px;">
 					<div class="contentHolder" style="float:left;">
 						<div style="float:left;width:400px; height:400px;" class="scrollcontent">
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+								
+								<h4>BRIDGESTONE </h4>
+								<h4 style="font-size:28px;">TASARIM YARISMASI 2013</h4>
 								<br><br>
-								It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-							 	<br><br>
-								Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-								<br><br>
-								Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-							</p>
+
+								<h4>YARIŞMA TEMASI</h4>
+								<p>Akıllı Telefon Kılıfı (Case) Tasarımı</p>
+
+								<br>
+								<h4>YARIŞMANIN AMACI</h4>
+								<p>Üniversitelerin tasarım ile ilgili bölümlerinde öğrenim gören veya bu bölümlerden yeni mezun olmuş “Geleceğin Başarılı Tasarımcıları”nın yaratıcılıklarını geliştirmek, kariyerlerini desteklemek amacıyla düzenlenmektedir. </p>
+								<br>
+								<h4>DEĞERLENDİRME KRİTERLERİ </h4>
+								<p>Jürinin değerlendirmesinde dikkate alınacak hususlar aşağıdaki gibidir;</p>
+								<br>
+								<p>
+								•	Estetik<br>
+								•	Özgünlük<br>
+								•	İşlevsellik<br>
+								•	Üretilebilirlik<br>
+								•	Sürdürülebilirlik<br>
+								</p>
+								<br>
+
+								<h4>JÜRİ</h4>
+								<p>Sezgin Akan - Akademisyen<br>
+								Elif Çigizoglu - Moda tasarimcisi<br>
+								Umut Eker - Stylist <br>
+								Mehmet Erzincan - Moda fotografcisi<br>
+								Sami Savatli - Endustri ürünleri tasarimcisi<br>
+								Egemen Atış - Brisa Tüketici Ürünleri Pazarlama Direktörü<br>
+								</p>
+								<br>
+								<h4>BAŞVURU KOŞULLARI</h4>
+								<p>T.C. vatandaşı olmak veya - T.C. vatandaşı olmayanlar için - T.C. üniversitelerinin B fıkrasında sözü edilen ilgili bölümlerinde öğrenci olmak.</p>
+								 <br>
+								<p>Yarışma, üniversitelerin tasarım ile ilgili bölümlerine kayıtlı lisans öğrencilerine ve bu bölümlerden mezuniyetleri üzerinden 1yıl geçmemiş yeni mezunlara açıktır.</p>
+								  <br>
+								<p>Katılımcı, en fazla 3 tasarım ile yarışmaya katılabilir.</p>
+								 <br>
+								<p>Yarışmaya katılan her projede özgünlük, daha önce başka bir yerde üretilmemiş olması, başka bir yarışmada ödül almamış olması şartları aranmaktadır. Bunun aksi bir durumun tespiti halinde, proje yarışmadan diskalifiye edilir. Ayrıca, yarışmaya gönderilen eserin özgün bir çalışma olmaması, aksine bir iddia olması ve üçüncü kişilerin tasarım üzerinde hak iddia etmesi durumunda sorumluluk yarışmacıya ait olacaktır.</p>
+								<br>
+								<p>Finale kalan ilk 10 finalist, tasarımlarının kullanım haklarını, hiçbir koşul öne sürmeksizin sözleşme ile Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devretmiş sayılacaktır. </p>
+								<br>
+								<p>Yarışma sonrası tasarımcılar verilecek ödüllerin dışında Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’den hiçbir talep, hak ve iddiada bulunamazlar. </p>
+								<br>
+								<p>Finale kalan tasarımların uygulanması ve üretimi durumunda proje sahiplerine ayrıca bir ücret ödenmez. </p>
+								<br>
+								<p>Bu projelerin Fikir ve Sanat Eserleri Kanunu (FSEK) kapsamında tüm mali ve mülkiyet hakları süre, yer ve muhteva bakımından sınırsız olmak kaydıyla münhasıran Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devir edilmiş olur. </p>
+								<br>
+								<p>Proje sahibi, isminin yayınlanmasına şimdiden muvafakat eder. </p>
+								<br>
+								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. organizasyonla ilgili yaptığı değişikliklerden sorumlu tutulamaz.</p>
+								<br>
+								<p>Yarışmaya müracaat edebilmek için, tasarım sahiplerinin aşağıda yer alan taahhütnameyi imzalayarak Promoküp Bilişim Teknolojileri A.Ş’nin resmi adresine göndermeleri gerekmektedir:</p>
+								<br>
+
+
+								<h4>TAAHHÜTNAME</h4>
+								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. tarafından düzenlenmekte olan “Bridgestone Tasarım Yarışması 2013” yarışmasına sunmuş olduğum tasarım ile katılmış bulunmaktayım. </p>
+								<br>
+								<p>Bu yarışma kapsamında, ilgili tasarımın tamamen bütün aşamaları ile tarafıma ait olduğunu, 3.şahıs/kurumlardan intihal/esinlenme v.b. suretiyle edinmediğimi kabul, beyan ve taahhüt ederim. </p>
+								<br>
+								<p>İş bu yarışma kapsamında tasarlamış olduğum tasarımın, tarafıma ait olmadığının tespiti ve bu sebeple Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’nin uğrayabileceği bütün zararları, nakden ve defaten Bridgestone’un ilk talebi halinde ödeyeceğimi gayrıkabilirücu olarak kabul, beyan ve taahhütle, yapmış olduğum tasarımımın ilk üçe seçilerek ödüllendirilmesi ve Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. tarafından üretilmek istenmesi halinde, iş bu yarışma kapsamında vaadedilen ödül dışında başkaca herhangi bir maddi talepte bulunmayacağımı, telif, patent bedeli, v.s. adı altında her nam altında olursa olsun hiçbir şekilde bir bedel talep etmeyeceğimi ve bu tasarımın tüm mali ve her türlü mülkiyet haklarının (çoğaltma, basma, yayma, değiştirme, satışa sunma v.b.) haklarının Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye ait olduğunu peşinen kabul, beyan ve taahhüt ederim.</p>
+								<br>
+
+								<h4>KATILIM ŞEKLİ</h4>
+								<p>Katılımcılar, çalışmalarını proje sitesinden indirdikleri örnek versiyon üzerinden hazırlayacaklardır. Başvurular online olarak proje sitesine yüklendikten sonra katılımcılar, öğrenci yada mezuniyet belgelerini ve proje sitesinden indirdikleri taahhütnamenin çıktısını imzalayarak en geç 15 Kasım 2013 tarihinde “Promoqube - İnönü Caddesi Mithat Paşa Apt. No:48-8 Gümüşsuyu Beyoğlu – İstanbul” adresinde olacak şekilde elden veya posta yolu ile iletmelidir. Belgelerin eksik olması halinde başvurular alınmayacaktır.</p>
+								<br>
+
+								<h4>DEĞERLENDİRME ŞEKLİ </h4>
+								<p>Ön jüri elemesini geçen eserler yarışma jürisine sunulacaktır. Jüri başkanı yönetiminde toplanacak olan yarışma jürisi bir araya gelerek eserleri yukarıda açıklanan değerlendirme kriterleri üzerinden değerlendirerek öncelikle ilk 10 ﬁnalisti belirleyecek, sonrasında belirlenen ilk 10 ﬁnalist içerisinden yarışmanın birincisi, ikincisi ve üçüncüsü seçilecektir.  </p>
+								<br>
+								<h4>SONUÇLARIN DUYURULMASI </h4>
+								<p>Jürinin elemeleri ile seçilen ilk 3 tasarım proje sitesi üzerinden açıklanacaktır. </p>
+								<p>İlk 3 tasarımın sahibine ayrıca kayıt sırasında verdikleri adresler üzerinden ulaşılacaktır. </p>
+								<br>
+
+								<h4>VERİLECEK ÖDÜLLER </h4>
+								<p>Birincilik Ödülü MacBook Pro 13" Retina DC i5 2.5GHz/8GB/128GB flash/HDG4000 ve  CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
+								<p>İkincilik Ödülü MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
+								<p>Üçüncülük Ödülü MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG </p>
+								<br>
+
+								<h4>TAKVIM</h4>
+								<p>Yarışma duyurusu 28 Ekim 2013</p>
+								<p>Son Başvuru tarihi 29 Kasım 2013</p>
+								<p>Jüri değerlendirmesi 30 Kasım 2013</p>
+								<p>Kazananların açıklanması 02 Aralık 2013</p>
+
 						</div>
 					</div>
 					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>

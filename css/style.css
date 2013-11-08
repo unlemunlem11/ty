@@ -196,6 +196,13 @@ body {
 	background-position: bottom right;
 }
 
+.kayit {
+	background-image: url("../img/oklar.png");
+	background-repeat: no-repeat;
+	background-position-x: 592px;
+	background-position-y: 68px;
+}
+
 .page .body p{
 	font-family: HelveticaNeueLTPro45Light;
 	font-size: 15px;
@@ -497,3 +504,5 @@ body {
 }
 
 .canvasLoader {display:none;float:left;margin-left:180px;margin-top:30px;}
+
+.yarismahakkinda h4 {font-family: helvetica}
