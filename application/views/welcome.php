@@ -345,7 +345,7 @@
 			
 			$(".case3d img").load(function(){
 				loaded++;
-				if(loaded == 81){
+				if(loaded == 50){
 					$(".icons").fadeIn(1600);	
 					$(".case3d").fadeIn();
 					$(".sol").fadeIn();
