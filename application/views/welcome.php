@@ -791,11 +791,11 @@ var frame = 0;
 							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
 						<span class="btn-lg" id="tasarimyukle_buton" style="margin-left:100px;margin-top:18px;">+Tasarımını Yükle</span>
-						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:221px;margin-top:44px;"></div>
+						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:221px;margin-top:42px;"></div>
 						<div style="width:500px;float:left;" class="uyarilar">
 							<p style="font-weight:bold;">Uyarılar:</p>
 							<br>
-							<p>- Dosya boyutu max. 1MB olmalıdır.</p>
+							<p>- Dosya boyutu max. 10MB olmalıdır.</p>
 							<p>- Destek verilen formatlar; jpg, png, pdf, ai, psd, tif</p>
 							<p>- Yaptığınız çalışmanın vektörel formatta hazırlanması gerekmektedir. </p>
 						</div>
