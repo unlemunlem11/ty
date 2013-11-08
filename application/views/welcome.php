@@ -269,7 +269,7 @@
 					return false;
 				}else{
 					if(checkFileSize("tasariminput2", false)){
-						fileUpload2(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action");
+						fileUpload(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action");
 					}else{
 						return false;
 					}
@@ -726,7 +726,7 @@ var frame = 0;
 							</div>
 							<div class="input fileinput">
 								<input type="text" placeholder="Dosya Adı" id="tasarimfilename2">
-								<form id="fileform2">
+								<form id="kayitformfile">
 									<input type="file" name="file" class="hiddeninput" id="tasariminput2">
 								</form>
 							</div>
