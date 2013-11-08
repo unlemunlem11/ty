@@ -759,7 +759,7 @@ var frame = 0;
 						<p style="width: 100%;float: left;line-height: 35px;margin-left: 46px;margin-top: 20px;text-indent: 4px;" id="katilim-kosullari-text" title="Katılım koşullarını okumanız ve kabul etmeniz gerekiyor!">
 							<img src="<?php echo base_url()?>img/checkbox.png" style="margin-top:6px; float:left;cursor:pointer">
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
-							<a href="#" class="openPage" data-page="kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
+							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
 						<div style="width:100%;float:left;" ><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"></div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
@@ -781,7 +781,7 @@ var frame = 0;
 						<p style="width: 100%;color:#191919; font-size:13px;float: left;line-height: 35px;margin-left: 92px;margin-top: 20px;text-indent: 4px;" id="katilim-kosullari2-text" title="Katılım koşullarını okumanız ve kabul etmeniz gerekiyor!">
 							<img src="<?php echo base_url()?>img/checkbox.png" style="margin-top:6px; float:left;cursor:pointer">
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
-							<a href="#" class="openPage" data-page="kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
+							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
 						<span class="btn-lg" id="tasarimyukle_buton" style="margin-left:100px;margin-top:18px;">+Tasarımını Yükle</span>
 						<div style="width:100%;float:left;"><div class="loading"></div></div>
