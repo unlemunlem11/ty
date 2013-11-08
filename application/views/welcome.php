@@ -391,7 +391,7 @@
 				openPage(".page-anasayfa");
 			});
 
-			$(".loading").canvasLoader({color:"red"});
+			$(".loading").canvasLoader({color:"white"});
 			
 
 			 /*
@@ -768,7 +768,7 @@ var frame = 0;
 							Katılım koşullarını okudum ve kabul ediyorum.
 						</p>
 						<span class="btn-lg" id="tasarimyukle_buton" style="margin-left:100px;margin-top:18px;">+Tasarımını Yükle</span>
-						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;margin-top:30px;"></div>
+						<div style="width:100%;float:left;"><div class="loading"></div></div>
 						<div style="width:500px;float:left;" class="uyarilar">
 							<p style="font-weight:bold;">Uyarılar:</p>
 							<br>
