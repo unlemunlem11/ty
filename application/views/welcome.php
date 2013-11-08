@@ -358,9 +358,6 @@
 							frame++;
 						}
 					}, 50);
-					setTimeout(function(){
-					//	$(".case3d img.caseframe40").fadeIn();
-					}, 400);
 				}
 
 				$(".yukleme_yuzde").text(((100 / 81) * loaded).toFixed(0));
