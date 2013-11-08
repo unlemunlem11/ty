@@ -152,6 +152,10 @@
 		}
 
 		function popup_alert(d){
+			$(".alert").css({
+				"left" : ($(window).width() - $(".alert").width()) / 2,
+				"top" : ($(window).height() - $(".alert").height()) / 2,
+			});
 			$(".alert .text").text(d);
 			$(".overlay").fadeIn();
 		}
@@ -337,7 +341,7 @@
 				}
 			});
 
-			$(".case3d img.caseframe40").fadeIn();
+			
 			$(".case3d img").load(function(){
 				loaded++;
 				if(loaded == 81){
@@ -353,6 +357,9 @@
 							frame++;
 						}
 					}, 50);
+					setTimeout(function(){
+					//	$(".case3d img.caseframe40").fadeIn();
+					}, 400);
 				}
 
 				$(".yukleme_yuzde").text(((100 / 81) * loaded).toFixed(0));
@@ -385,7 +392,16 @@
 				$(this).parents(".overlay").fadeOut();
 			 });
 
-			
+			$(document).bind('keydown',function(evt) {
+				if(evt.keyCode == "37"){
+					$("#slider").slider('value', $("#slider").slider("value") - 1);
+				}
+				if(evt.keyCode == "39"){
+					$("#slider").slider('value', $("#slider").slider("value") + 1);
+				}
+				$(".caseframe").hide();
+				$(".caseframe" + $("#slider").slider("value")).show();
+			});
 
 			$(".pagekapat").click(function(){
 				openPage(".page-anasayfa");
@@ -969,6 +985,11 @@ var frame = 0;
 					</div>
 					<div class="body">
 						<h2>Egemen <span>Atış / </span><span style="font-size:16px">Brisa Tüketici Ürünleri Pazarlama Direktörü</span></h2>
+						<p>1977 yılında doğan ve lisans eğitimini ODTÜ Makine Mühendisliği’nde tamamlayan Egemen Atış, lisans eğitiminin ardından Boğaziçi Üniversitesi’nde İşletme üzerine yüksek lisans yapmıştır.</p>
+
+						<p>2002 yılından beri Brisa bünyesinde çalışan ve Yeni Pazar Geliştirme Müdürü, Risk Yönetim Müdürü, Ürün Müdürü ve Ürün Yönetim Direktörü gibi çeşitli görevlerde bulunan Atış, 2012 yılından beri Tüketici Ürünleri Pazarlama Direktörlüğü görevini yürütmektedir.</p>
+
+						<p>Seyahat etmekten ve sörf yapmaktan keyif alan Egemen Atış, evli ve 2 yaşında bir kız çocuk babasıdır.</p>
 					</div>
 				</div>
 			</div>
@@ -1010,7 +1031,6 @@ var frame = 0;
 							</p>
 						</div>
 					</div>
-					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 

@@ -18,10 +18,14 @@
 }
 
 
+body {
+	background: #393939;
+}
+
 .main-site {
-	background: url("../img/bg.png") no-repeat;
+	background: url("../img/bg.jpg") no-repeat;
 	width: 100%;
-	height: 844px;
+	height: 760px;
 	float:left;
 }
 
@@ -341,6 +345,18 @@
 	background-size: 165px;
 	background-position-x: 4px;
 	background-position-y: 4px;
+	margin-top: 15px;
+	margin-left: 14px;
+}
+
+.juri-item:last-child {
+	margin-top: 15px;
+	margin-left: 14px;
+}
+
+.juri-item:last-child .juri-hover {
+	margin-top: 0px !important;
+	margin-left: 0px !important;
 }
 
 .juri-item:hover > .juri-hover {
@@ -398,7 +414,7 @@
 .contentHolder { position:relative; margin:0px auto; padding:0px; width: 440px; height: 400px; overflow: hidden; }
 .contentHolder .scrollcontent { height: 900px; }
 
-.case3d {margin-top:64px;}
+.case3d {margin-top:64px; overflow:hidden;}
 .case3d img {display:none; height:515px; width:309px;z-index:99; position: relative}
 
 .icon {position:absolute;z-index:2;}
@@ -423,6 +439,7 @@
 	color: white;
 	font-family: sans-serif;
 	font-size: 16px;
+	position: absolute;
 }
 
 .alert .kapat {
@@ -448,7 +465,6 @@
 	width: 257px;
 	margin-left: 66px;
 	color: white;
-	padding-top: 84px;
 }
 
 .overlay {
