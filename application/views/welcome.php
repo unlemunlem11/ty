@@ -31,7 +31,6 @@
 		};
 
 
-
 		function fileUpload(form, action_url, div_id, kayitform) {
 		    // Create the iframe...
 		    var iframe = document.createElement("iframe");
@@ -94,6 +93,13 @@
 		 
 		 	if(kayitform){
 			 	$("#katil").fadeOut(function(){
+			 		var cl = new Loader('Loader-container1');
+					cl.setColor('#ffffff'); // default is '#000000'
+					cl.setDiameter(57); // default is 40
+					cl.setDensity(60); // default is 40
+					cl.setRange(1); // default is 1.3
+					cl.setFPS(22); // default is 24
+					cl.show(); // Hidden by default
 			 		$(".kayit .loading").fadeIn();
 			 	});
 		 	}else{
@@ -183,7 +189,7 @@
 			$(".page").slideUp();
 			$(page).slideDown();
 		}
-
+		    
 
 		$(document).ready(function(){
 
@@ -745,7 +751,7 @@ var frame = 0;
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
 							Katılım koşullarını okudum ve kabul ediyorum.
 						</p>
-						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"></div>
+						<div style="width:100%;float:left;" ><?php /* <img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"> */?></div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
 					</div>
 				</div>

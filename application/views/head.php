@@ -26,8 +26,9 @@
 	<script type="text/javascript" src="<?php echo base_url()?>js/perfect-scrollbar.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery.transit.min.js"></script>
-	<script type="text/javascript" src="<?php echo base_url()?>js/imagesloaded.js"></script>
+	<?php /* <script type="text/javascript" src="<?php echo base_url()?>js/imagesloaded.js"></script> */ ?>
 	<script type="text/javascript" src="<?php echo base_url()?>js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url()?>js/loading.js"></script>
 
 
 	
