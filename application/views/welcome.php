@@ -1,7 +1,7 @@
 <?php include("head.php");?>
 	<title>Bridgestone Tasarım Yarışması</title>
 	<script type="text/javascript">
-
+var loaded = 0;
 		window.fbAsyncInit = function() {
 		    // init the FB JS SDK
 		    FB.init({
@@ -494,8 +494,6 @@
 			*/
 
 		});
-
-var loaded = 0;
 
 
 function animateTelefon(){
