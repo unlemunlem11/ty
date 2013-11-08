@@ -791,7 +791,7 @@ var frame = 0;
 							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
 						<span class="btn-lg" id="tasarimyukle_buton" style="margin-left:100px;margin-top:18px;">+Tasarımını Yükle</span>
-						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;"></div>
+						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:221px;margin-top:44px;"></div>
 						<div style="width:500px;float:left;" class="uyarilar">
 							<p style="font-weight:bold;">Uyarılar:</p>
 							<br>
