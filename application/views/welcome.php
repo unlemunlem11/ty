@@ -92,9 +92,15 @@
 		    // Submit the form...
 		    form.submit();
 		 
-		 	$("#tasarimyukle_buton").fadeOut(function(){
-		 		$("#upload-content .loading").fadeIn();
-		 	});
+		 	if(kayitform){
+			 	$("#katil").fadeOut(function(){
+			 		$(".kayit .loading").fadeIn();
+			 	});
+		 	}else{
+		 		$("#tasarimyukle_buton").fadeOut(function(){
+			 		$("#upload-content .loading").fadeIn();
+		 		});
+		 	}
 		    //document.getElementById(div_id).innerHTML = "Uploading...";
 		}
 
@@ -138,7 +144,7 @@
 		        	if(katilim_kosullari2 == false){
 			        	popup_alert("Katılım koşullarını kabul etmeniz gerekiyor");
 			        	return false;
-			        }	
+			        }
 		        }
 		        
 		    }
@@ -268,8 +274,8 @@
 				if(hata == true){
 					return false;
 				}else{
-					if(checkFileSize("tasariminput2", false)){
-						fileUpload(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action");
+					if(checkFileSize("tasariminput2", true)){
+						fileUpload(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action", true);
 					}else{
 						return false;
 					}
@@ -736,6 +742,7 @@ var frame = 0;
 							<img src="<?php echo base_url()?>img/checkbox-checked.png" style="display:none; margin-top:6px; float:left;cursor:pointer">
 							Katılım koşullarını okudum ve kabul ediyorum.
 						</p>
+						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:180px;width:40px;"></div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
 					</div>
 				</div>
