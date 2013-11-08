@@ -726,7 +726,7 @@ var frame = 0;
 							</div>
 							<div class="input fileinput">
 								<input type="text" placeholder="Dosya Adı" id="tasarimfilename2">
-								<form id="kayitformfile">
+								<form id="kayitfileform">
 									<input type="file" name="file" class="hiddeninput" id="tasariminput2">
 								</form>
 							</div>
