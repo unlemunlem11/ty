@@ -44,7 +44,7 @@
 		 
 		    // Add to document...
 		    form.parents("div").append(iframe);
-		    window.frames['upload_iframe' + div_id].name = "upload_iframe" + div_id;
+		    //window.frames['upload_iframe' + div_id].name = "upload_iframe" + div_id;
 		 
 		    iframeId = document.getElementById("upload_iframe" + div_id);
 		 
