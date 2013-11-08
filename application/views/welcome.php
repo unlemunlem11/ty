@@ -281,7 +281,10 @@
 					}
 					var data = $("#kayit-formu").serializeObject();
 					$.post("<?php echo base_url(); ?>welcome/create/", data, function(d){
-						openPage(".yukle");
+						$("#upload-content").hide(function(){
+		 					$("#upload-success").show();
+		 				});
+		 				openPage(".yukle");
 					});	
 				}
 			});
