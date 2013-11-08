@@ -408,13 +408,6 @@
 				openPage(".page-anasayfa");
 			});
 
-			var cl = new CanvasLoader('loading1');
-			cl.setColor('#ffffff'); // default is '#000000'
-			cl.setDiameter(47); // default is 40
-			cl.setDensity(58); // default is 40
-			cl.setRange(1.1); // default is 1.3
-			cl.show(); // Hidden by default
-			
 
 			 /*
 
