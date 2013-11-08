@@ -720,7 +720,7 @@ var frame = 0;
 					<br>
 					<p>commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id </p>
 					<span class="openPage btn-lg" data-page=".kayit" style="margin-left:100px;margin-top:40px;">+Başvuru Yap</span>
-					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+					<a href="" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 
@@ -767,7 +767,7 @@ var frame = 0;
 							tasarımlarda lastik veya emniyet konseptinde <br>
 									hazırlanmış olma şartı aranmaktadır.</p><br><br>
 									<p>Tasarım kitini buradan indirebilirsiniz.</p>
-									<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir" style="margin-left:18px; margin-top:44px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+									<a href="" class="case-indir" style="margin-left:18px; margin-top:44px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 					</div>
 				</div>
 			</div>
@@ -825,7 +825,7 @@ var frame = 0;
 					<p>Tasarım ve teknolojinin mükemmel uyumunu yakalamak için çıktığımız yolda “emniyet”e verdiğimiz önemi kendi tasarımlarına aktarabilecek genç yetenekler! Bridgestone Tasarım Yarışması büyük ödülleriyle sizi bekliyor…</p>
 					<br>
 					<p>Eğer sen de emniyet ve/veya lastiği tasarımlarımda en yaratıcı olarak ben kullanırım diyorsan; durma, tasarla, gönder!</p>
-					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+					<a href="" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 
@@ -1098,7 +1098,7 @@ var frame = 0;
 
 						</div>
 					</div>
-					<a href="<?php base_url()?>files/AkilliTelefonCase.pdf" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
+					<a href="" class="case-indir" style="margin-left:0px; margin-top:0px;"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
 
