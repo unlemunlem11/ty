@@ -407,8 +407,6 @@
 			$(".pagekapat").click(function(){
 				openPage(".page-anasayfa");
 			});
-
-			$(".loading").canvasLoader({color:"white"});
 			
 
 			 /*
