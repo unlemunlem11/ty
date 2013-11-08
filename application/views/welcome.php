@@ -35,18 +35,18 @@
 		function fileUpload(form, action_url, div_id, kayitform) {
 		    // Create the iframe...
 		    var iframe = document.createElement("iframe");
-		    iframe.setAttribute("id", "upload_iframe" + div_id);
-		    iframe.setAttribute("name", "upload_iframe" + div_id);
+		    iframe.setAttribute("id", "upload_iframe");
+		    iframe.setAttribute("name", "upload_iframe");
 		    iframe.setAttribute("width", "0");
 		    iframe.setAttribute("height", "0");
 		    iframe.setAttribute("border", "0");
 		    iframe.setAttribute("style", "width: 0; height: 0; border: none;");
 		 
 		    // Add to document...
-		    form.parents("div").append(iframe);
-		    //window.frames['upload_iframe' + div_id].name = "upload_iframe" + div_id;
+		    form.parentNode.appendChild(iframe);
+		    window.frames['upload_iframe'].name = "upload_iframe";
 		 
-		    iframeId = document.getElementById("upload_iframe" + div_id);
+		    iframeId = document.getElementById("upload_iframe");
 		 
 		    // Add event...
 		    var eventHandler = function () {
@@ -83,7 +83,7 @@
 		    if (iframeId.attachEvent) iframeId.attachEvent("onload", eventHandler);
 		 
 		    // Set properties of form...
-		    form.setAttribute("target", "upload_iframe" + div_id);
+		    form.setAttribute("target", "upload_iframe");
 		    form.setAttribute("action", action_url);
 		    form.setAttribute("method", "post");
 		    form.setAttribute("enctype", "multipart/form-data");
@@ -268,8 +268,8 @@
 				if(hata == true){
 					return false;
 				}else{
-					if(checkFileSize("tasariminput2"), true){
-						fileUpload($("#fileform2"), "<?php base_url() ?>welcome/upload/", "formupload_action", true);
+					if(checkFileSize("tasariminput2", false)){
+						fileUpload2(document.getElementById("fileform2"), "<?php base_url() ?>welcome/upload/", "upload_action");
 					}else{
 						return false;
 					}
@@ -325,7 +325,7 @@
 
 			$("#tasarimyukle_buton").click(function(){
 				if(checkFileSize("tasariminput", false)){
-					fileUpload($("#fileform"), "<?php base_url() ?>welcome/upload/", "upload_action", false);
+					fileUpload(document.getElementById("fileform"), "<?php base_url() ?>welcome/upload/", "upload_action", false);
 				}
 			});
 
