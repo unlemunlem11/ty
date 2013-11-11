@@ -707,11 +707,6 @@ var frame = 0;
 							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
 						<?php $k++; } ?>
 					</div>
-					<? /*
-					<div class="slide-wrapper" style="margin-top:-32px;position:relative; z-index:99">
-						<div id="slider" style="width:300px;margin-left:16px;"></div>
-					</div>
-					*/?>
 				</div>
 			</div>
 
