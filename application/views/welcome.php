@@ -184,6 +184,7 @@ var loaded = 0;
 		var user_name;
 		var userdata = {};
 		var file_upload_action = false;
+		var katilim_kosullari_geri = false;
 
 		function toDateTime(secs){
 		    var t = new Date();
@@ -818,7 +819,7 @@ var frame = 0;
 				<h2>Ödül Listesi</h2>
 				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px;">
-					<img src="<?php echo base_url()?>img/oduller.png" style="float:left; margin-left:54px;">
+					<img src="<?php echo base_url()?>img/oduller.png" style="float:left; margin-left:54px; width:759px;margin-top:69px;">
 				</div>
 			</div>
 
@@ -1014,7 +1015,7 @@ var frame = 0;
 						<div style="float:left;width:400px; height:400px;" class="scrollcontent">
 								
 								<h4>BRIDGESTONE </h4>
-								<h4 style="font-size:28px;">TASARIM YARISMASI 2013</h4>
+								<h4 style="font-size:28px;">TASARIM YARIŞMASI 2013</h4>
 								<br><br>
 
 								<h4>YARIŞMA TEMASI</h4>
@@ -1063,7 +1064,7 @@ var frame = 0;
 								<p>Proje sahibi, isminin yayınlanmasına şimdiden muvafakat eder. </p>
 
 								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. organizasyonla ilgili yaptığı değişikliklerden sorumlu tutulamaz.</p>
-
+								<br>
 								<h4>TAAHHÜTNAME</h4>
 								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. tarafından düzenlenmekte olan “Bridgestone Tasarım Yarışması 2013” yarışmasına sunmuş olduğum tasarım ile katılmış bulunmaktayım. </p>
 								<br>
@@ -1094,7 +1095,7 @@ var frame = 0;
 								<p><span style="font-weight:bold">Mansiyon Ödülü</span> iPhone 5 16GB - Siyah</p>
 								<br>
 
-								<h4>TAKVIM</h4>
+								<h4>TAKVİM</h4>
 								<p>Yarışma başlangıç tarihi 12 Kasım 2013</p>
 								<p>Son katılım tarihi 12 Aralık 2013</p>
 								<p>Jüri değerlendirmesi 16 Aralık 2013</p>
@@ -1113,21 +1114,21 @@ var frame = 0;
 					<div class="contentHolder" style="float:left;">
 						<div style="float:left;width:400px; height:400px;" class="scrollcontent">
 							<p>Katılımcı, istediği sayıda tasarım ile yarışmaya katılabilir.</p>
-
+							<br>
 							<p>Yarışmaya katılan her projede özgünlük, daha önce başka bir yerde üretilmemiş olması, başka bir yarışmada ödül almamış olması şartları aranmaktadır. Bunun aksi bir durumun tespiti halinde, proje yarışmadan diskalifiye edilir. Ayrıca, yarışmaya gönderilen eserin özgün bir çalışma olmaması, aksine bir iddia olması ve üçüncü kişilerin tasarım üzerinde hak iddia etmesi durumunda sorumluluk yarışmacıya ait olacaktır.</p>
-
+							<br>
 							<p>Finale kalan ilk 10 finalist, tasarımlarının kullanım haklarını, hiçbir koşul öne sürmeksizin sözleşme ile Brisa Bridgestone </p>
-
+							<br>
 							<p>Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devretmiş sayılacaktır. </p>
-
+							<br>
 							<p>Yarışma sonrası tasarımcılar verilecek ödüllerin dışında Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’den hiçbir talep, hak ve iddiada bulunamazlar. </p>
-
+							<br>
 							<p>Finale kalan tasarımların uygulanması ve üretimi durumunda proje sahiplerine ayrıca bir ücret ödenmez. </p>
-
+							<br>
 							<p>Bu projelerin Fikir ve Sanat Eserleri Kanunu (FSEK) kapsamında tüm mali ve mülkiyet hakları süre, yer ve muhteva bakımından sınırsız olmak kaydıyla münhasıran Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devir edilmiş olur. </p>
-
+							<br>
 							<p>Proje sahibi, isminin yayınlanmasına şimdiden muvafakat eder. </p>
-
+							<br>
 							<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. organizasyonla ilgili yaptığı değişikliklerden sorumlu tutulamaz.</p>
 
 						</div>
