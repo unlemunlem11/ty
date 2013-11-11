@@ -766,7 +766,7 @@ var frame = 0;
 							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
 						<div style="width:100%;float:left;" >
-							<img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:320px;margin-top:130px;">
+							<img src="<?php echo base_url();?>img/loading2.gif" class="loading" style="display:none;float:left;margin-left:320px;margin-top:130px;">
 						</div>
 						<span class="btn-lg" id="katil" style="margin-left:78px;">+ Katıl</span>
 					</div>
@@ -797,7 +797,7 @@ var frame = 0;
 							<a href="#" class="openPage" data-page=".kullanimkosullari">Katılım koşulları</a>nı okudum ve kabul ediyorum.
 						</p>
 						<span class="btn-lg" id="tasarimyukle_buton" style="margin-left:100px;margin-top:18px;">+Tasarımını Yükle</span>
-						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loader.gif" class="loading" style="display:none;float:left;margin-left:221px;margin-top:42px;"></div>
+						<div style="width:100%;float:left;"><img src="<?php echo base_url();?>img/loading2.gif" class="loading" style="display:none;float:left;margin-left:221px;margin-top:42px;"></div>
 						<div style="width:500px;float:left;" class="uyarilar">
 							<p style="font-weight:bold;">Uyarılar:</p>
 							<br>
