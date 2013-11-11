@@ -703,13 +703,13 @@ var frame = 0;
 					<div class="case3d" style="display:none">
 						<?php $k = 0; ?>
 						<?php for($i = 40; $i <= 80; $i++){?>
-							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
+							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png?nocache=<?php echo rand(9, 99999);?>" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
 						<?php 
 							$k++;
 						} ?>
 
 						<?php for($i = 0; $i <= 39; $i++){ ?>
-							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
+							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png?nocache=<?php echo rand(9, 99999);?>" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
 						<?php $k++; } ?>
 					</div>
 				</div>
