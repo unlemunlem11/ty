@@ -351,13 +351,14 @@ var loaded = 0;
 					$(".sol").fadeIn();
 					$(".case3dloading").hide();
 					var don = setInterval(function(){
-						if(frame == 40){
-							clearInterval(don);
+						if(frame == 80){
+							nextFrame(frame);
+							frame = 0;
 						}else{
 							nextFrame(frame);
 							frame++;
 						}
-					}, 50);
+					}, 60);
 				}
 
 				$(".yukleme_yuzde").text(((100 / 81) * loaded).toFixed(0));
@@ -706,9 +707,11 @@ var frame = 0;
 							<img src="<?php echo base_url(); ?>img/case/Case.RGB_color.00<?php echo $i; ?>.png" class="caseframe caseframe<?php echo $k;?>" data-frame="<?php echo $k;?>">
 						<?php $k++; } ?>
 					</div>
+					<? /*
 					<div class="slide-wrapper" style="margin-top:-32px;position:relative; z-index:99">
 						<div id="slider" style="width:300px;margin-left:16px;"></div>
 					</div>
+					*/?>
 				</div>
 			</div>
 
@@ -818,13 +821,11 @@ var frame = 0;
 				<h2>Yarışma Teması</h2>
 				<span class="pagekapat">X</span>
 				<div class="body" style="width:520px; margin:30px; line-height:20px;">
-					<p style="font-size:18px;"><span style="font-weight:bold;">Konsept:</span>Akıllı Telefon Case Yarışması</p>
+					<p style="font-size:18px;"><span style="font-weight:bold;">Konsept:</span>Akıllı Telefon Case Tasarımı  </p>
 					<br>
-					<p>Bridgestone olarak, üniversitelerin Güzel Sanatlar Fakültelerinde öğrenim gören, yeni mezun ya da yeteneğine güvenen her daldan sanatçıyı günlük hayatın vazgeçilmez bir parçası haline gelen akıllı telefonlara case tasarlamaya davet ediyoruz! </p>
-					<br>
-					<p>Tasarım ve teknolojinin mükemmel uyumunu yakalamak için çıktığımız yolda “emniyet”e verdiğimiz önemi kendi tasarımlarına aktarabilecek genç yetenekler! Bridgestone Tasarım Yarışması büyük ödülleriyle sizi bekliyor…</p>
-					<br>
-					<p>Eğer sen de emniyet ve/veya lastiği tasarımlarımda en yaratıcı olarak ben kullanırım diyorsan; durma, tasarla, gönder!</p>
+					<p>Bridgestone olarak, yeteneğine güvenen her daldan sanatçıyı günlük hayatın vazgeçilmez bir parçası haline gelen akıllı telefonlara case tasarlamaya davet ediyoruz! </p>
+					<p>Tasarım ve teknolojinin mükemmel uyumunu yakalamak için çıktığımız yolda yaratıcılığa verdiğimiz önemi kendi tasarımlarına aktarabilecek genç yetenekler! Bridgestone Tasarım Yarışması büyük ödülleriyle sizi bekliyor.
+					<p>Eğer sen de lastik konseptini tasarımlarımda en yaratıcı olarak ben kullanırım diyorsan; durma, tasarla, gönder!</p>
 					<a href="#" class="case-indir"><img src="<?php echo base_url();?>img/caseindir-buton.png"></a>
 				</div>
 			</div>
@@ -1016,7 +1017,7 @@ var frame = 0;
 
 								<br>
 								<h4>YARIŞMANIN AMACI</h4>
-								<p>Üniversitelerin tasarım ile ilgili bölümlerinde öğrenim gören veya bu bölümlerden yeni mezun olmuş “Geleceğin Başarılı Tasarımcıları”nın yaratıcılıklarını geliştirmek, kariyerlerini desteklemek amacıyla düzenlenmektedir. </p>
+								<p>"Geleceğin Basşarılı Tasarımcıları'nın yaratıcılıklarını geliştirmek, kariyerlerini desteklemek amacıyla düzenlenmektedir.</p>
 								<br>
 								<h4>DEĞERLENDİRME KRİTERLERİ </h4>
 								<p>Jürinin değerlendirmesinde dikkate alınacak hususlar aşağıdaki gibidir;</p>
@@ -1040,29 +1041,23 @@ var frame = 0;
 								</p>
 								<br>
 								<h4>BAŞVURU KOŞULLARI</h4>
-								<p>T.C. vatandaşı olmak veya - T.C. vatandaşı olmayanlar için - T.C. üniversitelerinin B fıkrasında sözü edilen ilgili bölümlerinde öğrenci olmak.</p>
-								 <br>
-								<p>Yarışma, üniversitelerin tasarım ile ilgili bölümlerine kayıtlı lisans öğrencilerine ve bu bölümlerden mezuniyetleri üzerinden 1yıl geçmemiş yeni mezunlara açıktır.</p>
-								  <br>
-								<p>Katılımcı, en fazla 3 tasarım ile yarışmaya katılabilir.</p>
-								 <br>
-								<p>Yarışmaya katılan her projede özgünlük, daha önce başka bir yerde üretilmemiş olması, başka bir yarışmada ödül almamış olması şartları aranmaktadır. Bunun aksi bir durumun tespiti halinde, proje yarışmadan diskalifiye edilir. Ayrıca, yarışmaya gönderilen eserin özgün bir çalışma olmaması, aksine bir iddia olması ve üçüncü kişilerin tasarım üzerinde hak iddia etmesi durumunda sorumluluk yarışmacıya ait olacaktır.</p>
-								<br>
-								<p>Finale kalan ilk 10 finalist, tasarımlarının kullanım haklarını, hiçbir koşul öne sürmeksizin sözleşme ile Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devretmiş sayılacaktır. </p>
-								<br>
-								<p>Yarışma sonrası tasarımcılar verilecek ödüllerin dışında Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’den hiçbir talep, hak ve iddiada bulunamazlar. </p>
-								<br>
-								<p>Finale kalan tasarımların uygulanması ve üretimi durumunda proje sahiplerine ayrıca bir ücret ödenmez. </p>
-								<br>
-								<p>Bu projelerin Fikir ve Sanat Eserleri Kanunu (FSEK) kapsamında tüm mali ve mülkiyet hakları süre, yer ve muhteva bakımından sınırsız olmak kaydıyla münhasıran Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devir edilmiş olur. </p>
-								<br>
-								<p>Proje sahibi, isminin yayınlanmasına şimdiden muvafakat eder. </p>
-								<br>
-								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. organizasyonla ilgili yaptığı değişikliklerden sorumlu tutulamaz.</p>
-								<br>
-								<p>Yarışmaya müracaat edebilmek için, tasarım sahiplerinin aşağıda yer alan taahhütnameyi imzalayarak Promoküp Bilişim Teknolojileri A.Ş’nin resmi adresine göndermeleri gerekmektedir:</p>
-								<br>
+								<p>Katılımcı, istediği sayıda tasarım ile yarışmaya katılabilir.</p>
 
+								<p>Yarışmaya katılan her projede özgünlük, daha önce başka bir yerde üretilmemiş olması, başka bir yarışmada ödül almamış olması şartları aranmaktadır. Bunun aksi bir durumun tespiti halinde, proje yarışmadan diskalifiye edilir. Ayrıca, yarışmaya gönderilen eserin özgün bir çalışma olmaması, aksine bir iddia olması ve üçüncü kişilerin tasarım üzerinde hak iddia etmesi durumunda sorumluluk yarışmacıya ait olacaktır.</p>
+
+								<p>Finale kalan ilk 10 finalist, tasarımlarının kullanım haklarını, hiçbir koşul öne sürmeksizin sözleşme ile Brisa Bridgestone </p>
+
+								<p>Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devretmiş sayılacaktır. </p>
+
+								<p>Yarışma sonrası tasarımcılar verilecek ödüllerin dışında Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’den hiçbir talep, hak ve iddiada bulunamazlar. </p>
+
+								<p>Finale kalan tasarımların uygulanması ve üretimi durumunda proje sahiplerine ayrıca bir ücret ödenmez. </p>
+
+								<p>Bu projelerin Fikir ve Sanat Eserleri Kanunu (FSEK) kapsamında tüm mali ve mülkiyet hakları süre, yer ve muhteva bakımından sınırsız olmak kaydıyla münhasıran Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devir edilmiş olur. </p>
+
+								<p>Proje sahibi, isminin yayınlanmasına şimdiden muvafakat eder. </p>
+
+								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. organizasyonla ilgili yaptığı değişikliklerden sorumlu tutulamaz.</p>
 
 								<h4>TAAHHÜTNAME</h4>
 								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. tarafından düzenlenmekte olan “Bridgestone Tasarım Yarışması 2013” yarışmasına sunmuş olduğum tasarım ile katılmış bulunmaktayım. </p>
@@ -1085,16 +1080,20 @@ var frame = 0;
 								<br>
 
 								<h4>VERİLECEK ÖDÜLLER </h4>
-								<p>Birincilik Ödülü MacBook Pro 13" Retina DC i5 2.5GHz/8GB/128GB flash/HDG4000 ve  CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
-								<p>İkincilik Ödülü MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
-								<p>Üçüncülük Ödülü MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG </p>
+								<p><span style="font-weight:bold">Birincilik Ödülü</span> MacBook Pro 13" Retina DC i5 2.5GHz/8GB/128GB flash/HDG4000 ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
+
+								<p><span style="font-weight:bold">İkincilik Ödülü</span> MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
+
+								<p><span style="font-weight:bold">Üçüncülük Ödülü</span> MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG</p>
+
+								<p><span style="font-weight:bold">Mansiyon Ödülü</span> iPhone 5 16GB - Siyah</p>
 								<br>
 
 								<h4>TAKVIM</h4>
-								<p>Yarışma duyurusu 28 Ekim 2013</p>
-								<p>Son Başvuru tarihi 29 Kasım 2013</p>
-								<p>Jüri değerlendirmesi 30 Kasım 2013</p>
-								<p>Kazananların açıklanması 02 Aralık 2013</p>
+								<p>Yarışma başlangıç tarihi 12 Kasım 2013</p>
+								<p>Son katılım tarihi 12 Aralık 2013</p>
+								<p>Jüri değerlendirmesi 16 Aralık 2013</p>
+								<p>Kazananların açıklanması 18 Aralık 2013</p>
 
 						</div>
 					</div>
@@ -1108,15 +1107,24 @@ var frame = 0;
 				<div class="body" style=" margin:30px; line-height:20px;">
 					<div class="contentHolder" style="float:left;">
 						<div style="float:left;width:400px; height:400px;" class="scrollcontent">
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-								<br><br>
-								It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-							 	<br><br>
-								Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-								<br><br>
-								Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-							</p>
+							<p>Katılımcı, istediği sayıda tasarım ile yarışmaya katılabilir.</p>
+
+							<p>Yarışmaya katılan her projede özgünlük, daha önce başka bir yerde üretilmemiş olması, başka bir yarışmada ödül almamış olması şartları aranmaktadır. Bunun aksi bir durumun tespiti halinde, proje yarışmadan diskalifiye edilir. Ayrıca, yarışmaya gönderilen eserin özgün bir çalışma olmaması, aksine bir iddia olması ve üçüncü kişilerin tasarım üzerinde hak iddia etmesi durumunda sorumluluk yarışmacıya ait olacaktır.</p>
+
+							<p>Finale kalan ilk 10 finalist, tasarımlarının kullanım haklarını, hiçbir koşul öne sürmeksizin sözleşme ile Brisa Bridgestone </p>
+
+							<p>Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devretmiş sayılacaktır. </p>
+
+							<p>Yarışma sonrası tasarımcılar verilecek ödüllerin dışında Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’den hiçbir talep, hak ve iddiada bulunamazlar. </p>
+
+							<p>Finale kalan tasarımların uygulanması ve üretimi durumunda proje sahiplerine ayrıca bir ücret ödenmez. </p>
+
+							<p>Bu projelerin Fikir ve Sanat Eserleri Kanunu (FSEK) kapsamında tüm mali ve mülkiyet hakları süre, yer ve muhteva bakımından sınırsız olmak kaydıyla münhasıran Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devir edilmiş olur. </p>
+
+							<p>Proje sahibi, isminin yayınlanmasına şimdiden muvafakat eder. </p>
+
+							<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. organizasyonla ilgili yaptığı değişikliklerden sorumlu tutulamaz.</p>
+
 						</div>
 					</div>
 				</div>
