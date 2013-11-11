@@ -65,7 +65,13 @@ var loaded = 0;
 		 			if(content == 1){
 		 				$(".loadingoverlay").hide();
 		 				if(kayitform){
-		 					file_upload_action = true;
+		 					var data = $("#kayit-formu").serializeObject();
+							$.post("<?php echo base_url(); ?>welcome/create/", data, function(d){
+								$("#upload-content").hide(function(){
+				 					$("#upload-success").show();
+				 				});
+				 				openPage(".yukle");
+							});	
 		 				}else{
 			 				openPage(".yukle");
 			 				$("#upload-content").fadeOut(function(){
@@ -131,7 +137,7 @@ var loaded = 0;
 		    else {
 		        file = input.files[0];
 		        if(file.size > 10485760){
-		        	popup_alert("Yüklemeye çalıştığınız dosya boyutu max 1MB olmalıdır. Lütfen tekrar deneyiniz.");
+		        	popup_alert("Yüklemeye çalıştığınız dosya boyutu max 10MB olmalıdır. Lütfen tekrar deneyiniz.");
 		        	return false;
 		        }
 		        var ext = file.name.split(".")[file.name.split(".").length - 1];
@@ -286,13 +292,6 @@ var loaded = 0;
 					}else{
 						return false;
 					}
-					var data = $("#kayit-formu").serializeObject();
-					$.post("<?php echo base_url(); ?>welcome/create/", data, function(d){
-						$("#upload-content").hide(function(){
-		 					$("#upload-success").show();
-		 				});
-		 				openPage(".yukle");
-					});	
 				}
 			});
 
