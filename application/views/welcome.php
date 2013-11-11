@@ -670,7 +670,9 @@ var frame = 0;
 <body>
 
 
+<div class="loadingoverlay" style="width:100%;height: 100%;position: fixed;background: rgba(0, 0, 0, 0.61);">
 
+</div>
 <div class="main-site">
 	<div class="content">
 		<?php include("header.php");?>
@@ -1162,10 +1164,6 @@ var frame = 0;
 				<div class="body" style="width:520px; margin:30px;">
 					<img src="<?php echo base_url()?>img/takvim.png">
 				</div>
-			</div>
-
-			<div class="loadingoverlay" style="width:100%;height: 100%;position: fixed;background: rgba(0, 0, 0, 0.61);">
-
 			</div>
 
 			<div class="overlay" style="display:none">
