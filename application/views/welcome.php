@@ -350,6 +350,7 @@ var loaded = 0;
 					$(".case3d").fadeIn();
 					$(".sol").fadeIn();
 					$(".case3dloading").hide();
+					$(".loadingoverlay").hide();
 					var don = setInterval(function(){
 						if(frame == 80){
 							nextFrame(frame);
@@ -668,6 +669,8 @@ var frame = 0;
 </head>
 <body>
 
+
+
 <div class="main-site">
 	<div class="content">
 		<?php include("header.php");?>
@@ -680,7 +683,7 @@ var frame = 0;
 					<div class="openPage hemenbasvur" data-page=".kayit"></div>
 				</div>
 				<div class="sag" style="float:left; width:400px;height:500px;margin-left:100px; margin-top:-58px;">
-					<div style="width:100%;float:left;" class="case3dloading">
+					<div style="display:none; width:100%;float:left;" class="case3dloading">
 						<img src="<?php echo base_url();?>img/loader.gif" class="loading" style="float:left;margin-left:320px;margin-top:130px;">
 					</div>
 					<div style="width:100%;float:left;text-align:center;color:white;margin-left: 141px;margin-top: 12px;" class="case3dloading">Yükleniyor (<span class="yukleme_yuzde"></span>)</div>
@@ -1159,6 +1162,10 @@ var frame = 0;
 				<div class="body" style="width:520px; margin:30px;">
 					<img src="<?php echo base_url()?>img/takvim.png">
 				</div>
+			</div>
+
+			<div class="loadingoverlay" style="width:100%;height: 100%;position: fixed;background: rgba(0, 0, 0, 0.61);">
+
 			</div>
 
 			<div class="overlay" style="display:none">
