@@ -63,6 +63,7 @@ var loaded = 0;
 		            }
 		 
 		 			if(content == 1){
+		 				$(".loadingoverlay").hide();
 		 				if(kayitform){
 		 					file_upload_action = true;
 		 				}else{
@@ -94,10 +95,12 @@ var loaded = 0;
 		 	if(kayitform){
 			 	$("#katil").fadeOut(function(){
 			 		$(".kayit .loading").fadeIn();
+			 		$(".loadingoverlay").show();
 			 	});
 		 	}else{
 		 		$("#tasarimyukle_buton").fadeOut(function(){
 			 		$("#upload-content .loading").fadeIn();
+			 		$(".loadingoverlay").show();
 		 		});
 		 	}
 		    //document.getElementById(div_id).innerHTML = "Uploading...";
@@ -664,6 +667,9 @@ function nextFrame(frame_id){
 }
 var frame = 0;
 	</script>
+	<style type="text/css">
+		.loading {position: relative}
+	</style>
 
 
 </head>
