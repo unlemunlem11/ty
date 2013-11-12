@@ -686,7 +686,7 @@ var frame = 0;
 		<?php include("header.php");?>
 		<div class="wrapper">
 			<div class="page page-anasayfa">
-				<div class="sol" style="display:none">
+				<div class="sol" style="display:none; margin-left: 55px !important;">
 					<div style="float:left; width:100px;height: 65px;margin-left: 84px;margin-top: 62px;">
 						<img src="<?php echo base_url();?>img/ok.png" class="hemenbasvur-ok">
 					</div>
@@ -1121,7 +1121,7 @@ var frame = 0;
 								<p>Jürinin elemeleri ile seçilen ilk 3 tasarım proje sitesi üzerinden açıklanacaktır. </p>
 
 								<p>İlk 3 tasarımın sahibine ayrıca kayıt sırasında verdikleri adresler üzerinden ulaşılacaktır. </p>
-<br>
+								<br>
 								<h4>ÖDÜLLER </h4>
 
 								<p>Birincilik Ödülü MacBook Pro 13" Retina DC i5 2.5GHz/8GB/128GB flash/HDG4000 ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE
