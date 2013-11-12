@@ -411,7 +411,7 @@ var loaded = 0;
 				openPage(".page-anasayfa");
 			});
 			
-			$(".case-indir").attr("href", "<?php echo base_url()?>/files/AkilliTelefonCase.pdf");
+			$(".case-indir").attr({target: "_blank", "href": "<?php echo base_url()?>/files/AkilliTelefonCase.pdf"});
 
 			 /*
 
