@@ -1132,6 +1132,7 @@ var frame = 0;
 								<p><span style="font-weight:bold;">Üçüncülük Ödülü</span> MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG </p>
 
 								<p><span style="font-weight:bold;">Mansiyon Ödülü</span> iPhone 5 16GB - Siyah</p>
+								
 								<br>
 								<h4>YARIŞMA TAKVİMİ</h4>
 
