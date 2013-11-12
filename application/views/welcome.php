@@ -1041,18 +1041,19 @@ var frame = 0;
 									<br>
 								• Sürdürülebilirlik</p>
 
+								<br>
 								<h4>JURİ</h4>
 
 								<p>Sezgin Akan - Akademisyen</p>
-								<br>
+								
 								<p>Elif Çigizoglu - Moda tasarimcisi</p>
-								<br>
+								
 								<p>Umut Eker - Stylist </p>
-								<br>
+								
 								<p>Mehmet Erzincan - Moda fotografcisi</p>
-								<br>
+								
 								<p>Sami Savatli - Endustri ürünleri tasarimcisi</p>
-								<br>
+								
 								<p>Egemen Atış - Brisa Tüketici Ürünleri Pazarlama Direktörü</p>
 								<br>
 								<h4>BAŞVURU KOŞULLARI</h4>
@@ -1060,19 +1061,19 @@ var frame = 0;
 									 
 
 								<p>Katılımcı, istediği sayıda tasarım ile yarışmaya katılabilir.</p>
-
+								<br>
 								<p>Yarışmaya katılan her projede özgünlük, daha önce başka bir yerde üretilmemiş olması, başka bir yarışmada ödül almamış olması şartları aranmaktadır. Bunun aksi bir durumun tespiti halinde, proje yarışmadan diskalifiye edilir. Ayrıca, yarışmaya gönderilen eserin özgün bir çalışma olmaması, aksine bir iddia olması ve üçüncü kişilerin tasarım üzerinde hak iddia etmesi durumunda sorumluluk yarışmacıya ait olacaktır.</p>
-
+								<br>
 								<p>Finale kalan ilk 10 finalist, tasarımlarının kullanım haklarını, hiçbir koşul öne sürmeksizin sözleşme ile Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devretmiş sayılacaktır. </p>
-
+								<br>
 								<p>Yarışma sonrası tasarımcılar verilecek ödüllerin dışında Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’den hiçbir talep, hak ve iddiada bulunamazlar. </p>
-
+								<br>
 								<p>Finale kalan tasarımların uygulanması ve üretimi durumunda proje sahiplerine ayrıca bir ücret ödenmez. </p>
-
+								<br>
 								<p>Bu projelerin Fikir ve Sanat Eserleri Kanunu (FSEK) kapsamında tüm mali ve mülkiyet hakları süre, yer ve muhteva bakımından sınırsız olmak kaydıyla münhasıran Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş.’ye devir edilmiş olur. </p>
-
+								<br>
 								<p>Proje sahibi, isminin yayınlanmasına şimdiden muvafakat eder. </p>
-
+								<br>
 								<p>Brisa Bridgestone Sabancı Lastik Sanayi ve Ticaret A. Ş. organizasyonla ilgili yaptığı değişikliklerden sorumlu tutulamaz.</p>
 								<br>
 								<h4>TAAHHÜTNAME</h4>
@@ -1124,13 +1125,13 @@ var frame = 0;
 								<br>
 								<h4>ÖDÜLLER </h4>
 
-								<p>Birincilik Ödülü MacBook Pro 13" Retina DC i5 2.5GHz/8GB/128GB flash/HDG4000 ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE
+								<p><span style="font-weight:bold;">Birincilik Ödülü</span> MacBook Pro 13" Retina DC i5 2.5GHz/8GB/128GB flash/HDG4000 ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE
 
-								<p>İkincilik Ödülü MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
+								<p><span style="font-weight:bold;">İkincilik Ödülü</span> MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG ve CS6 ADOBE DESIGN STD 6 WIN & MAC AOO LICENSE</p>
 
-								<p>Üçüncülük Ödülü MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG </p>
+								<p><span style="font-weight:bold;">Üçüncülük Ödülü</span> MacBook Air 11" DC i5 1.3GHz/4GB/128GB/HDG </p>
 
-								<p>Mansiyon Ödülü iPhone 5 16GB - Siyah</p>
+								<p><span style="font-weight:bold;">Mansiyon Ödülü</span> iPhone 5 16GB - Siyah</p>
 								<br>
 								<h4>YARIŞMA TAKVİMİ</h4>
 
