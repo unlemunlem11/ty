@@ -236,6 +236,7 @@ var loaded = 0;
 
 			$("#menu #down .body a").click(function(){
 				openPage("." + $(this).attr("href").split("#")[1]);
+				$(".loadingoverlay").hide();
 				$("#menu #down").fadeOut();
 
 			});
