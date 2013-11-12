@@ -351,8 +351,7 @@ body {
 	width: 169px;
 	height: 169px;
 	background-size: 165px;
-	background-position-x: 4px;
-	background-position-y: 4px;
+	background-position: 4px 4px;
 	margin-top: 15px;
 	margin-left: 14px;
 }
